@@ -13,6 +13,7 @@ from sklearn.metrics import classification_report
 
 # Define the Streamlit app
 def app():
+    st.write('Training')
     
 #run the app
 if __name__ == "__main__":

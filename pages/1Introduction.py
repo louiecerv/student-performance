@@ -81,6 +81,7 @@ def app():
     else:
         clf = tree.DecisionTreeClassifier()
         st.session_state['selected_model'] = 0
+        st.sidebar.header('User Input')
         st.sidebar.write('Selected Classifier ' + selected_option)
 
     # save the clf to the session variable

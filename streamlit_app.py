@@ -43,6 +43,9 @@ def app():
 
     if "selected_model" not in st.session_state: 
         st.session_state["selected_model"] = 0
+    
+    if "mnist" not in st.session_state: 
+        st.session_state["mnist"] = []
 
     text = """Louie F. Cervantes, M. Eng. (Information Engineering) \n\n
     CCS 229 - Intelligent Systems

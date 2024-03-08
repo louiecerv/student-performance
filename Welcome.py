@@ -91,7 +91,7 @@ def app():
     st.session_state['y_test'] = y_test    
     """
 
-    st.subheader('Select the classifier')
+    st.sidebar.subheader('Select the classifier')
 
     # Create the selection of classifier
     clf = DecisionTreeClassifier()

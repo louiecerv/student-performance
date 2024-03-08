@@ -68,7 +68,7 @@ def app():
         # Simulate some time-consuming task (e.g., sleep)
         time.sleep(0.1)
     # Progress bar reaches 100% after the loop completes
-    st.success("Task completed!")
+    st.success("Dataset loading completed!")
 
     # Extract only the specified number of images and labels
     size = 10000

@@ -57,6 +57,9 @@ def app():
     can provide a baseline for benchmarking algorithms."""
     st.write(text)
 
+    # Create a progress bar object
+    progress_bar = st.progress(0)
+
     # Load MNIST dataset
     mnist = fetch_openml('mnist_784', version=1, data_home=".", return_X_y=True)
 
@@ -74,6 +77,14 @@ def app():
     st.session_state['X_test'] = X_test
     st.session_state['y_train'] = y_train
     st.session_state['y_test'] = y_test    
+
+    for i in range(100):
+        # Update progress bar value
+        progress_bar.progress(i + 1)
+        # Simulate some time-consuming task (e.g., sleep)
+        time.sleep(0.1)
+    # Progress bar reaches 100% after the loop completes
+    st.success("Task completed!")
     
 #run the app
 if __name__ == "__main__":

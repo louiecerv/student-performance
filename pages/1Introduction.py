@@ -99,6 +99,10 @@ def app():
     # save the clf to the session variable
     st.session_state['clf'] = clf
 
+
+if st.button("Training"):
+    st.switch_page("2Training") 
+
 #run the app
 if __name__ == "__main__":
     app()

@@ -35,7 +35,7 @@ def app():
     st.session_state['y_train'] = y_train
     st.session_state['y_test'] = y_test
 
-    st.text('The task: Classify handwritten digits from 0 to 9 based on a given image.')
+    st.subheader('The task: Classify handwritten digits from 0 to 9 based on a given image.')
     text = """Dataset: MNIST - 70,000 images of handwritten digits (28x28 pixels), each labeled 
     with its corresponding digit (0-9).
     \nModels:
@@ -78,7 +78,7 @@ def app():
 
     st.subheader('Select the classifier')
 
-    # Create the selecton of classifier
+    # Create the selection of classifier
 
     clf = tree.DecisionTreeClassifier()
     options = ['Decision Tree', 'Random Forest Classifier', 'Extreme Random Forest Classifier', 'K Nearest Neighbor']

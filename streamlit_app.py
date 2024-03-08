@@ -60,13 +60,16 @@ def app():
 
     # Create a progress bar object
     progress_bar = st.progress(0, text="Loading the dataset please wait...")
+    
     # Load MNIST dataset
     mnist = fetch_openml('mnist_784', version=1, data_home=".", return_X_y=True)
+
     for i in range(100):
         # Update progress bar value
         progress_bar.progress(i + 1)
         # Simulate some time-consuming task (e.g., sleep)
-        time.sleep(0.1)
+        time.sleep(0.01)
+        
     # Progress bar reaches 100% after the loop completes
     st.success("Dataset loading completed!")
 

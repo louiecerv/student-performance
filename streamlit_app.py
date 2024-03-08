@@ -63,7 +63,7 @@ def app():
         progress_bar = st.progress(0, text="Loading the dataset please wait...")
         
         # Load MNIST dataset
-        mnist = fetch_openml('mnist_784', version=1, data_home=".", return_X_y=True)
+        st.session_state.mnist = fetch_openml('mnist_784', version=1, data_home=".", return_X_y=True)
 
         for i in range(100):
             # Update progress bar value
@@ -79,7 +79,7 @@ def app():
 
     # Extract only the specified number of images and labels
     size = 10000
-    X, y = mnist
+    X, y = st.session_state.mnist
     X = X[:size]
     y = y[:size]
 

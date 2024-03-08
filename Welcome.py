@@ -5,7 +5,7 @@ import streamlit as st
 import altair as alt
 import matplotlib.pyplot as plt
 import seaborn as sns
-import sklearn.tree
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import confusion_matrix
@@ -94,7 +94,7 @@ def app():
     st.subheader('Select the classifier')
 
     # Create the selection of classifier
-    clf = tree.DecisionTreeClassifier()
+    clf = DecisionTreeClassifier()
     options = ['Decision Tree', 'Random Forest Classifier', 'Extreme Random Forest Classifier', 'K-Nearest Neighbor']
     selected_option = st.sidebar.selectbox('Select the classifier', options)
     if selected_option =='Random Forest Classifier':
@@ -110,7 +110,7 @@ def app():
         st.session_state['selected_model'] = 3
         st.sidebar.write('Selected Classifier ' + selected_option)
     else:
-        clf = tree.DecisionTreeClassifier()
+        clf = DecisionTreeClassifier()
         st.session_state['selected_model'] = 0
 
     # save the clf to the session variable

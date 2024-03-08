@@ -68,9 +68,8 @@ def app():
     st.subheader('Performance Metrics')
     st.text(classification_report(y_test, y_test_pred))
 
-    st.write(text)
     st.write(report)
-    
+
     # save the clf to the session state
     st.session_state['clf'] = clf
 

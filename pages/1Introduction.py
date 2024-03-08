@@ -86,15 +86,19 @@ def app():
     if selected_option =='Random Forest Classifier':
         clf = RandomForestClassifier(n_jobs=2, random_state=0)
         st.session_state['selected_model'] = 1
+        st.sidebar.write('Selected Classifier ' + selected_option)
     elif selected_option=='Extreme Random Forest Classifier':        
         clf = ExtraTreesClassifier(n_estimators=100, max_depth=4, random_state=0)
         st.session_state['selected_model'] = 2
+        st.sidebar.write('Selected Classifier ' + selected_option)
     elif selected_option == 'K-Nearest Neighbor':
         clf = KNeighborsClassifier(n_neighbors=5)
         st.session_state['selected_model'] = 3
+        st.sidebar.write('Selected Classifier ' + selected_option)
     else:
         clf = tree.DecisionTreeClassifier()
         st.session_state['selected_model'] = 0
+        st.sidebar.write('Selected Classifier ' + selected_option)
 
     # save the clf to the session variable
     st.session_state['clf'] = clf

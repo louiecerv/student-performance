@@ -59,7 +59,7 @@ def app():
     st.write(text)
 
     # Create a progress bar object
-    progress_bar = st.progress(0)
+    progress_bar = st.progress(0, text="Loading the dataset please wait..."))
     # Load MNIST dataset
     mnist = fetch_openml('mnist_784', version=1, data_home=".", return_X_y=True)
     for i in range(100):

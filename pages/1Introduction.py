@@ -17,24 +17,6 @@ from sklearn.datasets import fetch_openml
 def app():
     st.session_state["current_form"] = 2
 
-    # Load MNIST dataset
-    mnist = fetch_openml('mnist_784', version=1, data_home=".", return_X_y=True)
-
-    # Extract only the specified number of images and labels
-    size = 10000
-    X, y = mnist
-    X = X[:size]
-    y = y[:size]
-
-    # Split data into training and testing sets
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-    #save the values to the session state    
-    st.session_state['X_train'] = X_train
-    st.session_state['X_test'] = X_test
-    st.session_state['y_train'] = y_train
-    st.session_state['y_test'] = y_test
-
     st.subheader('The task: Classify handwritten digits from 0 to 9 based on a given image.')
     text = """Dataset: MNIST - 70,000 images of handwritten digits (28x28 pixels), each labeled 
     with its corresponding digit (0-9).

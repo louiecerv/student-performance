@@ -55,6 +55,24 @@ def app():
     of Standards and Technology. MNIST is a popular dataset in the field of machine learning and 
     can provide a baseline for benchmarking algorithms."""
     st.write(text)
+
+    # Load MNIST dataset
+    mnist = fetch_openml('mnist_784', version=1, data_home=".", return_X_y=True)
+
+    # Extract only the specified number of images and labels
+    size = 10000
+    X, y = mnist
+    X = X[:size]
+    y = y[:size]
+
+    # Split data into training and testing sets
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+    #save the values to the session state    
+    st.session_state['X_train'] = X_train
+    st.session_state['X_test'] = X_test
+    st.session_state['y_train'] = y_train
+    st.session_state['y_test'] = y_test    
     
 #run the app
 if __name__ == "__main__":

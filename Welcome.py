@@ -52,8 +52,7 @@ def app():
     West Visayas State University"""
     st.text(text)
 
-    st.image('MNIST.png', caption="Replace he image and replace this text with the descrption"""
-    st.write(text)
+    st.image('MNIST.png', caption="Replace he image and replace this text with the description""")
 
     if "dataset_ready" not in st.session_state:
         # Create a progress bar object

@@ -100,7 +100,7 @@ def app():
     st.session_state['clf'] = clf
 
     if st.button("Training"):
-        st.switch_page("pages/2Training") 
+        st.switch_page("../pages/2Training") 
 
 #run the app
 if __name__ == "__main__":

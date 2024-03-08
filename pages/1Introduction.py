@@ -38,7 +38,9 @@ def app():
 
     X_train = st.session_state['X_train']
     X_test = st.session_state['X_test']
-
+    y_train = st.session_state['y_train']
+    y_test = st.session_state['y_test']
+        
     st.subheader('First 25 images in the MNIST dataset') 
 
     # Get the first 25 images and reshape them to 28x28 pixels

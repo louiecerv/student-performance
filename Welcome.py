@@ -19,12 +19,10 @@ def app():
     if "reset_app" not in st.session_state:
         st.session_state.reset_app = False
 
-    text = """Decision Tree, Random Forest and K-Nearest Neighbor on the MNIST Dataset"""
+    text = """Insert Your App Title Here"""
     st.subheader(text)
 
     # Use session state to track the current form
-    if "current_form" not in st.session_state:
-        st.session_state["current_form"] = 0
 
     if "clf" not in st.session_state: 
         st.session_state["clf"] = []
@@ -54,19 +52,16 @@ def app():
     West Visayas State University"""
     st.text(text)
 
-    st.image('MNIST.png', caption="Modified National Institute of Standards and Technology", use_column_width=True)
-    text = """MNIST is a large database of handwritten digits that is commonly used for training and
-    testing various image processing systems. The acronym stands for Modified National Institute 
-    of Standards and Technology. MNIST is a popular dataset in the field of machine learning and 
-    can provide a baseline for benchmarking algorithms."""
+    st.image('MNIST.png', caption="Replace he image and replace this text with the descrption"""
     st.write(text)
 
     if "dataset_ready" not in st.session_state:
         # Create a progress bar object
         progress_bar = st.progress(0, text="Loading the dataset please wait...")
-        
+
+        # replace with your dataset
         # Load MNIST dataset
-        st.session_state.mnist = fetch_openml('mnist_784', version=1, data_home=".", return_X_y=True)
+        #st.session_state.mnist = fetch_openml('mnist_784', version=1, data_home=".", return_X_y=True)
 
         for i in range(100):
             # Update progress bar value
@@ -79,7 +74,7 @@ def app():
         st.session_state.dataset_ready = True
 
  
-
+    """
     # Extract only the specified number of images and labels
     size = 10000
     X, y = st.session_state.mnist
@@ -94,7 +89,7 @@ def app():
     st.session_state['X_test'] = X_test
     st.session_state['y_train'] = y_train
     st.session_state['y_test'] = y_test    
-
+    """
 
     
 #run the app

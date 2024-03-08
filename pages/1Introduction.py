@@ -99,7 +99,6 @@ def app():
     # save the clf to the session variable
     st.session_state['clf'] = clf
 
-    st.write('Navigate to the Performance Page.')
 
 #run the app
 if __name__ == "__main__":

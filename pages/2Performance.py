@@ -32,7 +32,7 @@ def app():
         ensemble structure."""
         classifier = 'Random Forest'
     elif st.session_state['selected_model'] == 2:   # Extreme Random Forest
-        text = """Performance: Can achieve similar or slightly better 
+        report = """Performance: Can achieve similar or slightly better 
         accuracy compared to a random forest, but results can vary 
         depending on hyperparameter tuning. Introduces additional randomness 
         during tree building by randomly selecting features at each split.  Aims to 

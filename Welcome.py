@@ -12,7 +12,6 @@ from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 from sklearn.datasets import fetch_openml
-from tensorflow.keras.datasets import mnist
 import time
 
 # Define the Streamlit app
@@ -59,12 +58,11 @@ def app():
 
         #replace with your dataset
         #Load MNIST dataset
-        #st.session_state.mnist = fetch_openml('mnist_784', version=1, data_home=".", return_X_y=True)
-        st.session_state.mnist = mnist.load_data()
+        st.session_state.mnist = fetch_openml('mnist_784', version=1, data_home=".", return_X_y=True)
+
         for i in range(100):
             # Update progress bar value
             progress_bar.progress(i + 1)
-            # Simulate some time-consuming task (e.g., sleep)
             time.sleep(0.01)
 
         # Progress bar reaches 100% after the loop completes

@@ -22,16 +22,7 @@ def app():
         Susceptible to changes in the training data, potentially 
         leading to high variance in predictions."""
         classifier = 'Decision Tree'
-    elif st.session_state['selected_model'] == 1:   # Random Forest
-        report = """Generally outperforms a single decision tree, 
-        reaching accuracy close to 98%. Reduces overfitting through 
-        averaging predictions from multiple trees. Ensemble method - 
-        combines predictions from multiple decision trees, leading to 
-        improved generalization and reduced variance. Less interpretable 
-        compared to a single decision tree due to the complex 
-        ensemble structure."""
-        classifier = 'Random Forest'
-    elif st.session_state['selected_model'] == 2:   # Extreme Random Forest
+    elif st.session_state['selected_model'] == 1:   # Extreme Random Forest
         report = """Performance: Can achieve similar or slightly better 
         accuracy compared to a random forest, but results can vary 
         depending on hyperparameter tuning. Introduces additional randomness 
@@ -41,13 +32,14 @@ def app():
         hyperparameter tuning to achieve optimal performance."""
         classifier = "Extreme Random Forest"
     else:
-        report = """Accuracy: While KNN can achieve reasonable accuracy (around 80-90%), 
-        it's often outperformed by more sophisticated models like Support 
-        Vector Machines (SVMs) or Convolutional Neural Networks (CNNs) which can 
-        reach over 97% accuracy.\nComputational cost: Classifying new data points 
-        requires comparing them to all data points in the training set, making 
-        it computationally expensive for large datasets like MNIST."""
-        classifier = "K-Nearest Neighbor"
+        report = """Gradient boosting classifiers perform well on the MNIST 
+        handwritten digit dataset, typically achieving accuracy in the high 90s 
+        (often exceeding 98%). Gradient boosting excels at handling complex, 
+        non-linear relationships within the data, which is helpful for
+        recognizing the varied shapes of handwritten digits. It can achieve 
+        accuracy comparable to other popular methods for MNIST like 
+        Support Vector Machines (SVMs) and Random Forests."""
+        classifier = "Gradient Boosting"
 
     st.subheader('Performance of the ' + classifier)
 

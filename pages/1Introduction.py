@@ -5,9 +5,9 @@ import streamlit as st
 import altair as alt
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn import tree
-from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier
-from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import ExtraTreesClassifier
+from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
@@ -46,6 +46,10 @@ def app():
     train_images = np.array(X_train)
     train_labels = np.array(y_train)
     images = train_images[:25].reshape(-1, 28, 28)
+
+    # Create a progress bar object
+    progress_bar = st.progress(0, text="Generating digit images please wait...")
+    
     # Create a 5x5 grid of subplots
     fig, axes = plt.subplots(5, 5, figsize=(10, 10))
     # Plot each image on a separate subplot
@@ -58,6 +62,11 @@ def app():
     plt.tight_layout()
     st.pyplot(fig)
 
+    for i in range(100):
+        # Update progress bar value
+        progress_bar.progress(i + 1)
+        # Simulate some time-consuming task (e.g., sleep)
+        time.sleep(0.01)
 
 #run the app
 if __name__ == "__main__":

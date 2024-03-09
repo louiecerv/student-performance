@@ -85,22 +85,6 @@ def app():
         st.session_state['y_train'] = y_train
         st.session_state['y_test'] = y_test    
 
-        st.sidebar.subheader('Select the classifier')
-
-        # Create the selection of classifier
-        clf = DecisionTreeClassifier()
-        st.session_state['selected_model'] = 0
-        options = ['Decision Tree', 'Extreme Random Forest Classifier', 'Gradient Boosting Classifier']
-        selected_option = st.sidebar.selectbox('Select the classifier', options)
-        if selected_option=='Extreme Random Forest Classifier':        
-            clf = ExtraTreesClassifier(n_estimators=100, max_depth=4, random_state=0)
-            st.session_state['selected_model'] = 1
-        elif selected_option == 'Gradient Boosting Classifier':
-            clf = GradientBoostingClassifier()
-            st.session_state['selected_model'] = 2
-
-        # save the clf to the session variable
-        st.session_state['clf'] = clf
     
 #run the app
 if __name__ == "__main__":

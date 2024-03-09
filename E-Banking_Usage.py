@@ -18,7 +18,7 @@ import time
 def app():
 
 
-    text = """Gradient Boosting Classifier on the MNIST Digits Dataset"""
+    text = """E-Banking Usage Among CBM Students"""
     st.subheader(text)
 
     # Use session state to track the current form
@@ -57,8 +57,8 @@ def app():
         progress_bar = st.progress(0, text="Loading the dataset please wait...")
 
         #replace with your dataset
-        #Load MNIST dataset
-        st.session_state.mnist = fetch_openml('mnist_784', version=1, data_home=".", return_X_y=True)
+
+
 
         for i in range(100):
             # Update progress bar value

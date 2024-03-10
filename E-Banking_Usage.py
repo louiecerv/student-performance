@@ -66,25 +66,6 @@ def app():
 
     st.write(text)
 
-    if "dataset_ready" not in st.session_state:
-        # Create a progress bar object
-        progress_bar = st.progress(0, text="Loading the dataset please wait...")
-
-        #replace with your dataset
-        df = pd.read_csv('e-banking.csv', header=0)
-
-        st.session_state['df'] = df
-          
-        st.subheader('The Dataset')
-        for i in range(100):
-            # Update progress bar value
-            progress_bar.progress(i + 1)
-            time.sleep(0.01)
-        # Progress bar reaches 100% after the loop completes
-        st.success("Dataset loading completed!")
-
-        st.session_state.dataset_ready = True
-    
 #run the app
 if __name__ == "__main__":
     app()

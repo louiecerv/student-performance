@@ -22,8 +22,9 @@ def app():
     text = """Describe the dataset and the various algorithms here."""
     st.write(text)
 
-    df = st.session_state['df']
-        
+    #replace with your dataset
+    df = pd.read_csv('e-banking.csv', header=0)
+
     # Create a progress bar object
     st.progress_bar = st.progress(0, text="Generating data graphs please wait...")
 
@@ -45,7 +46,8 @@ def app():
 
     # save the label encoder to the session state
     st.session_state["le"] = le_list
-    
+    st.session_state['df'] = df    
+
     st.write('After encoding to numbers')
     st.write(df)
     

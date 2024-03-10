@@ -36,19 +36,26 @@ def app():
     st.write(df)
 
     le = LabelEncoder()
+
+      # Separate features and target column
+    features = df.drop(target_column, axis=1)
+    target = df[target_column]
+
     #Get the list of column names
-    column_names = df.columns.tolist()
+    column_names = features.columns.tolist()
 
     le_list = []  # Create an empty array to store LabelEncoders
     # Loop through each column name
     for cn in column_names:
         le = LabelEncoder()  # Create a new LabelEncoder for each column
-        le.fit(df[cn])  # Fit the encoder to the specific column
+        le.fit(features[cn])  # Fit the encoder to the specific column
         le_list.append(le)  # Append the encoder to the list
-        df[cn] = le.transform(df[cn])  # Transform the column using the fitted encoder
+        features[cn] = le.transform(features[cn])  # Transform the column using the fitted encoder
 
     # save the label encoder to the session state
     st.session_state["le"] = le_list
+    # Combine encoded features and target column
+    df = pd.concat([features, target], axis=1)
     
     st.write('After encoding to numbers')
     st.write(df)

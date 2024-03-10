@@ -69,7 +69,7 @@ def app():
     st.sidebar.subheader('Select the classifier')
 
     # Create the selection of classifier
-    clf = LogisticRegression()
+    clf = LogisticRegression(solver='lbfgs', multi_class='multinomial')
     st.session_state['selected_model'] = 0
     options = ['Logistic Regression', 'SVR Regressor', 'Decision Tree', 'Gradient Boosting']
     selected_option = st.sidebar.selectbox('Select the classifier', options)

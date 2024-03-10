@@ -28,7 +28,8 @@ def app():
     y_test = st.session_state['y_test']
         
     # Create a progress bar object
-    progress_bar = st.progress(0, text="Generating data graphs please wait...")
+    st.progress_bar = st.progress(0, text="Generating data graphs please wait...")
+
     st.write('Browse the dataset')
     st.write(df)
     st.write('Descriptive Statistics')
@@ -37,7 +38,7 @@ def app():
     
     for i in range(100):
         # Update progress bar value
-        progress_bar.progress(i + 1)
+        st.progress_bar.progress(i + 1)
         # Simulate some time-consuming task (e.g., sleep)
         time.sleep(0.01)
     st.success("Data visualization completed!")

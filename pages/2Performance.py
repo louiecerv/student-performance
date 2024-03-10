@@ -12,12 +12,44 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.ensemble import GradientBoostingClassifier
 
-
-
 # Define the Streamlit app
 def app():
 
-    classifier = ''
+    X_train = st.session_state['X_train']
+    X_test = st.session_state['X_test']
+    y_train= st.session_state['y_train']
+    y_test = st.session_state['y_test']
+
+    st.sidebar.subheader('Select the classifier')
+
+    # Create the selection of classifier
+    options = ['Extra Trees Classifier', 'SVM', 'Decision Tree', 'Gradient Boosting']
+    selected_option = st.sidebar.selectbox('Select the classifier', options)
+    if selected_option=='Extra Trees Regressor':        
+        clf = ExtraTreesClassifier()
+        st.session_state['selected_model'] = 0
+    elif selected_option=='SVR Regressor':        
+        clf = SVC()
+        st.session_state['selected_model'] = 1
+    elif selected_option == 'Decision Tree':
+        clf = DecisionTreeClassifier()
+        st.session_state['selected_model'] = 2
+    elif selected_option == 'Gradient Boosting':
+        clf = GradientBoostingClassifier(n_estimators=100, learning_rate=1.0, max_depth=3)
+        st.session_state['selected_model'] = 3
+
+    clf.fit(X_train, y_train)
+    y_test_pred = clf.predict(X_test)
+
+    st.subheader('Confusion Matrix')
+    st.write('Confusion Matrix')
+    cm = confusion_matrix(y_test, y_test_pred)
+    st.text(cm)
+
+    st.subheader('Performance Metrics')
+    st.text(classification_report(y_test, y_test_pred))
+
+   classifier = ''
     if st.session_state['selected_model'] == 0:     # Logistic Regression
         report = """Achieves good accuracy, but can be prone to 
         overfitting, leading to lower performance on unseen data.
@@ -55,40 +87,6 @@ def app():
 
     st.subheader('Performance of the ' + classifier)
 
-    X_train = st.session_state['X_train']
-    X_test = st.session_state['X_test']
-    y_train= st.session_state['y_train']
-    y_test = st.session_state['y_test']
-
-    st.sidebar.subheader('Select the classifier')
-
-    # Create the selection of classifier
-    options = ['Extra Trees Classifier', 'SVM', 'Decision Tree', 'Gradient Boosting']
-    selected_option = st.sidebar.selectbox('Select the classifier', options)
-    if selected_option=='Extra Trees Regressor':        
-        clf = ExtraTreesClassifier()
-        st.session_state['selected_model'] = 0
-    elif selected_option=='SVR Regressor':        
-        clf = SVC()
-        st.session_state['selected_model'] = 1
-    elif selected_option == 'Decision Tree':
-        clf = DecisionTreeClassifier()
-        st.session_state['selected_model'] = 2
-    elif selected_option == 'Gradient Boosting':
-        clf = GradientBoostingClassifier(n_estimators=100, learning_rate=1.0, max_depth=3)
-        st.session_state['selected_model'] = 3
-
-    clf.fit(X_train, y_train)
-    y_test_pred = clf.predict(X_test)
-
-    st.subheader('Confusion Matrix')
-    st.write('Confusion Matrix')
-    cm = confusion_matrix(y_test, y_test_pred)
-    st.text(cm)
-
-    st.subheader('Performance Metrics')
-    st.text(classification_report(y_test, y_test_pred))
-    
     st.write(classifier)
     st.write(report)
 

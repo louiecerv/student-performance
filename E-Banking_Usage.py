@@ -75,11 +75,13 @@ def app():
 
         #replace with your dataset
         df = pd.read_csv('e-banking.csv', header=0)
+        # exclude the second target column
+        df.drop('Influence', axis=1, inplace=True)
         st.session_state['df'] = df
         
         # load the data and the labels
-        X = df.values[:,0:-2]   #This file contains two target columns
-        y = df.values[:,-2]        
+        X = df.values[:,0:-1]
+        y = df.values[:,-1]        
 
         st.subheader('The Dataset')
         for i in range(100):

@@ -29,32 +29,12 @@ def app():
         
     # Create a progress bar object
     progress_bar = st.progress(0, text="Generating data graphs please wait...")
+    st.write('Browse the dataset')
+    st.write(df)
+    st.write('Descriptive Statistics')
+    st.write(df.describe().T)
     
-    fig, ax = plt.subplots()
-    # Create the horizontal barplot
-    sns.countplot(y='Sex', data=df, hue='Sex', palette='bright', ax=ax)
-    # Add the title
-    ax.set_title('Plot of Sex Distribution')
-    # Display the plot using Streamlit
-    st.pyplot(fig)
-
-    # Create a new figure and axes object
-    fig, ax = plt.subplots()
-    # Create a horizontal barplot using seaborn
-    sns.countplot(y='Income', data=df, hue='Income', palette='bright', ax=ax)
-    # Set title
-    ax.set_title('Plot of Income Distribution')
-    st.pyplot(fig)
-
-    # Create a new figure and axes object
-    fig, ax = plt.subplots()
-    # Create a horizontal barplot using seaborn
-    sns.countplot(y='usagelevel', data=df, hue='usagelevel', palette='bright', ax=ax)
-
-    # Set title
-    ax.set_title('Plot of E-banking Usage Distribution')
-    st.pyplot(fig)
-
+    
     for i in range(100):
         # Update progress bar value
         progress_bar.progress(i + 1)

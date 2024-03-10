@@ -8,13 +8,15 @@ import seaborn as sns
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.ensemble import GradientBoostingClassifier
-from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report
+from sklearn.preprocessing import LabelEncoder
 import time
 
 # Define the Streamlit app
 def app():
+
+    if "le_list" not in st.session_state:
+        st.session_state.le_list = []
 
     st.subheader('The task: Classify respondent g-banking usage as either low or high.')
     text = """Describe the dataset and the various algorithms here."""
@@ -32,8 +34,25 @@ def app():
 
     st.write('Browse the dataset')
     st.write(df)
+
+    le = LabelEncoder()
+    #Get the list of column names
+    column_names = df.columns.tolist()
+
+    le_list = []  # Create an empty array to store LabelEncoders
+    # Loop through each column name
+    for cn in column_names:
+        le = LabelEncoder()  # Create a new LabelEncoder for each column
+        le.fit(df[cn])  # Fit the encoder to the specific column
+        le_list.append(le)  # Append the encoder to the list
+        df[cn] = le.transform(df[cn])  # Transform the column using the fitted encoder
+
+    # save the label encoder to the session state
+    st.session_state["le"] = le_list
     
-    
+    st.write('After encoding to numbers')
+    st.write(df)
+
     for i in range(100):
         # Update progress bar value
         st.progress_bar.progress(i + 1)

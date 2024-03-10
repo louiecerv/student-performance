@@ -19,7 +19,8 @@ def app():
     X_test = st.session_state['X_test']
     y_train= st.session_state['y_train']
     y_test = st.session_state['y_test']
-
+    clf = st.session_state['clf']
+    
     st.sidebar.subheader('Select the classifier')
 
     # Create the selection of classifier

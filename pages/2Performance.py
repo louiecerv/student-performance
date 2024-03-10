@@ -29,7 +29,7 @@ def app():
     if selected_option=='Extra Trees Classifier':        
         clf = ExtraTreesClassifier()
         st.session_state['selected_model'] = 0
-    elif selected_option=='SVR':        
+    elif selected_option=='SVM':        
         clf = SVC()
         st.session_state['selected_model'] = 1
     elif selected_option == 'Decision Tree':

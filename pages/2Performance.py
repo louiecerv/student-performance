@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.svm import SVR
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import GradientBoostingRegressor
@@ -69,10 +69,10 @@ def app():
     st.sidebar.subheader('Select the classifier')
 
     # Create the selection of classifier
-    options = ['Logistic Regression', 'SVR Regressor', 'Decision Tree', 'Gradient Boosting']
+    options = ['Extra Trees Regressor', 'SVR Regressor', 'Decision Tree', 'Gradient Boosting']
     selected_option = st.sidebar.selectbox('Select the classifier', options)
-    if selected_option=='Logistic Regression':        
-        clf = LogisticRegression(solver='lbfgs', multi_class='multinomial')
+    if selected_option=='Extra Trees Regressor':        
+        clf = ExtraTreesRegressor(n_estimators=100, random_state=0)
         st.session_state['selected_model'] = 0
     elif selected_option=='SVR Regressor':        
         clf = SVR()

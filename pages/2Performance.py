@@ -49,7 +49,7 @@ def app():
     st.subheader('Performance Metrics')
     st.text(classification_report(y_test, y_test_pred))
 
-   classifier = ''
+    classifier = ''
     if st.session_state['selected_model'] == 0:     # Logistic Regression
         report = """Achieves good accuracy, but can be prone to 
         overfitting, leading to lower performance on unseen data.

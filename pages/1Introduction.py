@@ -16,7 +16,7 @@ import time
 # Define the Streamlit app
 def app():
 
-    st.subheader('The task: Classify handwritten digits from 0 to 9 based on a given image.')
+    st.subheader('The task: Classify respondent g-banking usage as either low or high.')
     text = """Describe the dataset and the various algorithms here."""
     st.write(text)
 

@@ -18,7 +18,7 @@ def app():
     if "le_list" not in st.session_state:
         st.session_state.le_list = []
 
-    st.subheader('The task: Classify respondent g-banking usage as either low, moderate or high.')
+    st.subheader('The task: Classify e-banking usage as low, moderate or high.')
     text = """Describe the dataset and the various algorithms here."""
     st.write(text)
 

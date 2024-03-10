@@ -84,8 +84,8 @@ def app():
         clf = GradientBoostingRegressor()
         st.session_state['selected_model'] = 3
 
-    st.write(X_train)
-    
+    st.write(y_train)
+
     clf.fit(X_train, y_train)
     y_test_pred = clf.predict(X_test)
 

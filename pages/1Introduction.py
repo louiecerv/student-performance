@@ -33,7 +33,7 @@ def app():
     le = LabelEncoder()
 
     #Get the list of column names
-    column_names = features.columns.tolist()
+    column_names = df.columns.tolist()
 
     le_list = []  # Create an empty array to store LabelEncoders
     # Loop through each column name

@@ -50,30 +50,42 @@ def app():
     West Visayas State University"""
     st.text(text)
 
-    st.image('MNIST.png', caption="The MNIST Digits Dataset")
+    st.image('ebabaking.jpg', caption="The E-banking Usage")
+    text = """Dataset for E-Banking Usage and Spending Habits of CBM Students at WVSU
+    \nThis dataset investigates the relationship between e-banking usage and 
+    spending habits among College of Business Management (CBM) students at 
+    West Visayas State University (WVSU).
+    \nFeatures:
+    \nfamily_income (categorical): This feature represents the student's family 
+    income level. It is divided into categories like "low," "medium," or "high" based
+    on a pre-defined income range.
+    \nSex (binary): This feature indicates the student's sex, coded as "male" or "female."
+    \ncourse (categorical): This feature specifies the student's academic program within CBM. 
+    Label: e_banking_usage (binary): This variable indicates the student's level of 
+    e-banking usage. It is coded as "low" or "high"."""
+
+    st.write(text)
 
     if "dataset_ready" not in st.session_state:
         # Create a progress bar object
         progress_bar = st.progress(0, text="Loading the dataset please wait...")
 
         #replace with your dataset
+        df = pd.read_csv('encoded-ebanking.csv', header=0)
 
+        # load the data and the labels
+        X = df.values[:,0:-1]
+        y = df.values[:,-1]        
 
-
+        st.subheader('The Dataset')
         for i in range(100):
             # Update progress bar value
             progress_bar.progress(i + 1)
             time.sleep(0.01)
-
         # Progress bar reaches 100% after the loop completes
         st.success("Dataset loading completed!")
-        st.session_state.dataset_ready = True
 
-        # Extract only the specified number of images and labels
-        size = 10000
-        X, y = st.session_state.mnist
-        X = X[:size]
-        y = y[:size]
+        st.session_state.dataset_ready = True
 
         # Split data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)

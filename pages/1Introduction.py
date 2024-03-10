@@ -27,10 +27,8 @@ def app():
     y_train = st.session_state['y_train']
     y_test = st.session_state['y_test']
         
-    st.subheader('First 25 images in the MNIST dataset') 
-
     # Create a progress bar object
-    progress_bar = st.progress(0, text="Generating digit images please wait...")
+    progress_bar = st.progress(0, text="Loading the dataset please wait...")
     
     fig, ax = plt.subplots()
     # Create the horizontal barplot

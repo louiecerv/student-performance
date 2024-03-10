@@ -74,12 +74,12 @@ def app():
         progress_bar = st.progress(0, text="Loading the dataset please wait...")
 
         #replace with your dataset
-        df = pd.read_csv('encoded-ebanking.csv', header=0)
+        df = pd.read_csv('e-banking.csv', header=0)
         st.session_state['df'] = df
         
         # load the data and the labels
-        X = df.values[:,0:-1]
-        y = df.values[:,-1]        
+        X = df.values[:,0:-2]   #This file contains two target columns
+        y = df.values[:,-2]        
 
         st.subheader('The Dataset')
         for i in range(100):

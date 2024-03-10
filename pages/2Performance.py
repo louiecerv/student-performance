@@ -11,6 +11,7 @@ from sklearn.metrics import classification_report
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.svm import SVC
 
 # Define the Streamlit app
 def app():

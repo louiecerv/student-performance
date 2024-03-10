@@ -61,7 +61,7 @@ def app():
     on a pre-defined income range.
     \nSex (binary): This feature indicates the student's sex, coded as "male" or "female."
     \ncourse (categorical): This feature specifies the student's academic program within CBM. 
-    Label: e_banking_usage (binary): This variable indicates the student's level of 
+    \nLabel: e_banking_usage (binary): This variable indicates the student's level of 
     e-banking usage. It is coded as "low" or "high"."""
 
     st.write(text)

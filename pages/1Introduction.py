@@ -28,7 +28,7 @@ def app():
     y_test = st.session_state['y_test']
         
     # Create a progress bar object
-    progress_bar = st.progress(0, text="Loading the dataset please wait...")
+    progress_bar = st.progress(0, text="Generating data graphs please wait...")
     
     fig, ax = plt.subplots()
     # Create the horizontal barplot
@@ -60,6 +60,7 @@ def app():
         progress_bar.progress(i + 1)
         # Simulate some time-consuming task (e.g., sleep)
         time.sleep(0.01)
+    st.success("Data visualization completed!")
 
 #run the app
 if __name__ == "__main__":

@@ -76,7 +76,7 @@ def app():
         #replace with your dataset
         df = pd.read_csv('e-banking.csv', header=0)
         # exclude the second target column
-        df = df.drop('Influence', axis=1, inplace=True)
+        df = df.drop('Influence', axis=1)
         st.session_state['df'] = df
         
         # load the data and the labels

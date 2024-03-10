@@ -20,16 +20,16 @@ def app():
     y_train= st.session_state['y_train']
     y_test = st.session_state['y_test']
     clf = st.session_state['clf']
-    
+
     st.sidebar.subheader('Select the classifier')
 
     # Create the selection of classifier
     options = ['Extra Trees Classifier', 'SVM', 'Decision Tree', 'Gradient Boosting']
     selected_option = st.sidebar.selectbox('Select the classifier', options)
-    if selected_option=='Extra Trees Regressor':        
+    if selected_option=='Extra Trees Classifier':        
         clf = ExtraTreesClassifier()
         st.session_state['selected_model'] = 0
-    elif selected_option=='SVR Regressor':        
+    elif selected_option=='SVR':        
         clf = SVC()
         st.session_state['selected_model'] = 1
     elif selected_option == 'Decision Tree':

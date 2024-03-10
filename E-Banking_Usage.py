@@ -43,9 +43,6 @@ def app():
     if "selected_model" not in st.session_state: 
         st.session_state["selected_model"] = 0
     
-    if "mnist" not in st.session_state: 
-        st.session_state["mnist"] = []
-
     text = """Louie F. Cervantes, M. Eng. (Information Engineering) \n\n
     CCS 229 - Intelligent Systems
     Computer Science Department
@@ -77,13 +74,9 @@ def app():
         df = pd.read_csv('e-banking.csv', header=0)
         # exclude the second target column
         df = df.drop('Influence', axis=1)
-        
-        st.session_state['df'] = df
-        
-        # load the data and the labels
-        X = df.values[:,0:-1]
-        y = df.values[:,-1]        
 
+        st.session_state['df'] = df
+          
         st.subheader('The Dataset')
         for i in range(100):
             # Update progress bar value
@@ -93,16 +86,6 @@ def app():
         st.success("Dataset loading completed!")
 
         st.session_state.dataset_ready = True
-
-        # Split data into training and testing sets
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-        #save the values to the session state    
-        st.session_state['X_train'] = X_train
-        st.session_state['X_test'] = X_test
-        st.session_state['y_train'] = y_train
-        st.session_state['y_test'] = y_test    
-
     
 #run the app
 if __name__ == "__main__":

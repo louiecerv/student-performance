@@ -23,11 +23,6 @@ def app():
     st.write(text)
 
     df = st.session_state['df']
-
-    X_train = st.session_state['X_train']
-    X_test = st.session_state['X_test']
-    y_train = st.session_state['y_train']
-    y_test = st.session_state['y_test']
         
     # Create a progress bar object
     st.progress_bar = st.progress(0, text="Generating data graphs please wait...")
@@ -59,6 +54,19 @@ def app():
     
     st.write('After encoding to numbers')
     st.write(df)
+
+    # load the data and the labels
+    X = df.values[:,0:-1]
+    y = df.values[:,-1]      
+    
+    # Split data into training and testing sets
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+    #save the values to the session state    
+    st.session_state['X_train'] = X_train
+    st.session_state['X_test'] = X_test
+    st.session_state['y_train'] = y_train
+    st.session_state['y_test'] = y_test    
 
     for i in range(100):
         # Update progress bar value

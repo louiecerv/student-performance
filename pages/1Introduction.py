@@ -39,9 +39,9 @@ def app():
     # Loop through each column name
     for cn in column_names:
         le = LabelEncoder()  # Create a new LabelEncoder for each column
-        le.fit(features[cn])  # Fit the encoder to the specific column
+        le.fit(df[cn])  # Fit the encoder to the specific column
         le_list.append(le)  # Append the encoder to the list
-        features[cn] = le.transform(features[cn])  # Transform the column using the fitted encoder
+        df[cn] = le.transform(df[cn])  # Transform the column using the fitted encoder
 
     # save the label encoder to the session state
     st.session_state["le"] = le_list

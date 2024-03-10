@@ -11,6 +11,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVR
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import GradientBoostingRegressor
+from sklearn.metrics import r2_score, mean_squared_error
+
 
 
 # Define the Streamlit app

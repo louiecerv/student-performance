@@ -23,7 +23,7 @@ def app():
     st.write(text)
 
     #replace with your dataset
-    df = pd.read_csv('e-banking2.csv', header=0)
+    df = pd.read_csv('e-banking3.csv', header=0)
 
     # Create a progress bar object
     st.progress_bar = st.progress(0, text="Generating data graphs please wait...")

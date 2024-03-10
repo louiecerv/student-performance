@@ -1,289 +1,289 @@
-Course,Income,Usage,Influence
-BSTM,Php 20 000 and Below,4.777777778,4.333333333
-BSTM,Above Php 60 000,3.555555556,3.333333333
-BSTM,Php 20 001 to Php 60 000,3.333333333,4.111111111
-BSTM,Php 20 001 to Php 60 000,3,3.888888889
-BSTM,Php 20 001 to Php 60 000,2.444444444,3.111111111
-BSTM,Php 20 000 and Below,3.222222222,4.333333333
-BSTM,Php 20 000 and Below,2.888888889,3
-BSTM,Php 20 000 and Below,3.444444444,4
-BSTM,Above Php 60 000,2.111111111,4.777777778
-BSTM,Php 20 001 to Php 60 000,2.666666667,3.111111111
-BSTM,Php 20 000 and Below,2.666666667,2.777777778
-BSTM,Php 20 001 to Php 60 000,4.222222222,3.666666667
-BSCM,Php 20 001 to Php 60 000,5,5
-BSBA,Php 20 001 to Php 60 000,3.444444444,4.111111111
-BSCM,Php 20 000 and Below,3.666666667,3.777777778
-BSBA,Php 20 000 and Below,3.222222222,3.555555556
-BSCM,Php 20 001 to Php 60 000,3.555555556,3.777777778
-BSBA,Above Php 60 000,2,2.666666667
-BSBA,Php 20 000 and Below,1.777777778,2.777777778
-BSCM,Php 20 001 to Php 60 000,1.333333333,3
-BSBA,Php 20 001 to Php 60 000,3.888888889,3.222222222
-BSCM,Php 20 000 and Below,3.111111111,3.333333333
-BSBA,Php 20 000 and Below,3.777777778,4.444444444
-BSBA,Php 20 001 to Php 60 000,2.777777778,3
-BSCM,Php 20 000 and Below,2.444444444,3.222222222
-BSHM,Php 20 001 to Php 60 000,1.444444444,2.777777778
-BSHM,Php 20 001 to Php 60 000,2.222222222,3.555555556
-BSHM,Php 20 000 and Below,3.333333333,3.111111111
-BSHM,Php 20 000 and Below,2.333333333,3.888888889
-BSHM,Php 20 000 and Below,1,2.555555556
-BSHM,Php 20 000 and Below,3,4.222222222
-BSHM,Php 20 000 and Below,1.888888889,3.111111111
-BSCM,Php 20 001 to Php 60 000,3.555555556,3.555555556
-BSHM,Php 20 000 and Below,3.777777778,3.444444444
-BSHM,Php 20 001 to Php 60 000,4,3.555555556
-BSCM,Php 20 000 and Below,1.666666667,2.888888889
-BSCM,Php 20 000 and Below,3.444444444,2.888888889
-BSBA,Php 20 000 and Below,2.666666667,3.777777778
-BSBA,Php 20 000 and Below,2.111111111,3.111111111
-BSTM,Php 20 000 and Below,2,2.666666667
-BSBA,Php 20 000 and Below,1.666666667,3.444444444
-BSBA,Php 20 000 and Below,2.777777778,2.888888889
-BSCM,Above Php 60 000,3.888888889,3.444444444
-BSBA,Php 20 001 to Php 60 000,4.333333333,4.222222222
-BSBA,Php 20 000 and Below,1.222222222,3
-BSBA,Php 20 000 and Below,3.333333333,4.555555556
-BSCM,Php 20 000 and Below,3.444444444,3.666666667
-BSHM,Php 20 001 to Php 60 000,3.666666667,3.222222222
-BSHM,Php 20 001 to Php 60 000,3.222222222,3.888888889
-BSTM,Php 20 001 to Php 60 000,2.777777778,3.555555556
-BSCM,Php 20 000 and Below,3.333333333,3.888888889
-BSBA,Php 20 001 to Php 60 000,2.777777778,3.333333333
-BSBA,Php 20 000 and Below,1.555555556,3.111111111
-BSCM,Php 20 001 to Php 60 000,1.444444444,3.333333333
-BSBA,Php 20 000 and Below,3.222222222,3.777777778
-BSCM,Php 20 001 to Php 60 000,3.444444444,3.111111111
-BSTM,Php 20 000 and Below,2.111111111,3.888888889
-BSBA,Php 20 001 to Php 60 000,1.888888889,3.444444444
-BSBA,Php 20 001 to Php 60 000,2.666666667,4.333333333
-BSBA,Php 20 001 to Php 60 000,3.666666667,3
-BSBA,Php 20 001 to Php 60 000,4,3
-BSBA,Php 20 001 to Php 60 000,1.555555556,4.666666667
-BSCM,Php 20 000 and Below,3.666666667,2.333333333
-BSBA,Php 20 000 and Below,3.777777778,3.444444444
-BSBA,Above Php 60 000,1.777777778,4.111111111
-BSBA,Php 20 000 and Below,2.888888889,3.555555556
-BSTM,Above Php 60 000,3.333333333,2.777777778
-BSTM,Above Php 60 000,3.222222222,4
-BSTM,Php 20 001 to Php 60 000,3.222222222,2.888888889
-BSTM,Php 20 001 to Php 60 000,2.555555556,3.777777778
-BSTM,Php 20 001 to Php 60 000,2.444444444,3.333333333
-BSBA,Php 20 001 to Php 60 000,2.555555556,3.444444444
-BSTM,Php 20 001 to Php 60 000,4,3.111111111
-BSHM,Php 20 001 to Php 60 000,4.111111111,3.777777778
-BSHM,Php 20 001 to Php 60 000,3.555555556,3.555555556
-BSHM,Php 20 000 and Below,2.666666667,2.777777778
-BSTM,Php 20 000 and Below,4.222222222,4.333333333
-BSBA,Php 20 000 and Below,2.777777778,3.888888889
-BSBA,Php 20 000 and Below,3.444444444,3.555555556
-BSBA,Php 20 001 to Php 60 000,3.888888889,4.111111111
-BSBA,Php 20 000 and Below,3.222222222,2.666666667
-BSBA,Php 20 001 to Php 60 000,4,4.111111111
-BSHM,Php 20 000 and Below,4,3.333333333
-BSTM,Php 20 000 and Below,2.444444444,3.111111111
-BSBA,Php 20 001 to Php 60 000,2.555555556,4
-BSCM,Php 20 000 and Below,3.666666667,4.555555556
-BSCM,Php 20 000 and Below,2.666666667,3.555555556
-BSCM,Php 20 000 and Below,2.555555556,4
-BSBA,Php 20 000 and Below,1.888888889,3.666666667
-BSTM,Php 20 001 to Php 60 000,3.222222222,4.555555556
-BSTM,Php 20 000 and Below,3.777777778,3.888888889
-BSTM,Php 20 000 and Below,2.888888889,3.111111111
-BSTM,Php 20 001 to Php 60 000,3.555555556,3.333333333
-BSTM,Php 20 000 and Below,1.666666667,2.444444444
-BSTM,Php 20 000 and Below,3.222222222,3.666666667
-BSTM,Php 20 000 and Below,4.333333333,4
-BSTM,Above Php 60 000,2.555555556,3.666666667
-BSTM,Php 20 000 and Below,3.555555556,4.444444444
-BSTM,Php 20 000 and Below,1.888888889,2.888888889
-BSTM,Php 20 001 to Php 60 000,4.333333333,4
-BSTM,Php 20 001 to Php 60 000,3.555555556,3.222222222
-BSTM,Above Php 60 000,2.555555556,5
-BSTM,Above Php 60 000,2.444444444,4.111111111
-BSTM,Above Php 60 000,3.111111111,3.777777778
-BSTM,Php 20 001 to Php 60 000,2.777777778,2
-BSTM,Php 20 001 to Php 60 000,2.444444444,3.888888889
-BSTM,Php 20 000 and Below,2.555555556,3.222222222
-BSTM,Php 20 000 and Below,4,4
-BSTM,Php 20 000 and Below,3.666666667,3.888888889
-BSBA,Php 20 001 to Php 60 000,2.777777778,3.555555556
-BSCM,Above Php 60 000,4,3.888888889
-BSBA,Above Php 60 000,2.555555556,3.222222222
-BSHM,Php 20 001 to Php 60 000,3.111111111,3.555555556
-BSHM,Php 20 000 and Below,2.666666667,2.888888889
-BSHM,Php 20 000 and Below,1.222222222,2.333333333
-BSHM,Php 20 000 and Below,3.444444444,4
-BSHM,Php 20 000 and Below,4.111111111,4.888888889
-BSHM,Php 20 001 to Php 60 000,3.222222222,3.222222222
-BSHM,Php 20 000 and Below,2.555555556,2
-BSHM,Php 20 000 and Below,4,4
-BSHM,Php 20 000 and Below,2.444444444,2.111111111
-BSHM,Php 20 000 and Below,4.777777778,3.666666667
-BSHM,Php 20 000 and Below,3.111111111,3
-BSHM,Php 20 000 and Below,3.444444444,3.777777778
-BSHM,Php 20 001 to Php 60 000,3.777777778,4.444444444
-BSHM,Above Php 60 000,3.666666667,3.888888889
-BSHM,Php 20 001 to Php 60 000,3,2.777777778
-BSHM,Php 20 001 to Php 60 000,3.555555556,3.666666667
-BSHM,Above Php 60 000,3.666666667,3.666666667
-BSHM,Php 20 001 to Php 60 000,3.111111111,4.444444444
-BSHM,Php 20 000 and Below,3.888888889,4.111111111
-BSHM,Php 20 000 and Below,3,3
-BSHM,Php 20 001 to Php 60 000,4,4.888888889
-BSHM,Php 20 000 and Below,2.444444444,3.333333333
-BSTM,Above Php 60 000,4.555555556,3.444444444
-BSTM,Above Php 60 000,4.222222222,4.444444444
-BSTM,Php 20 001 to Php 60 000,4.111111111,4.888888889
-BSTM,Php 20 001 to Php 60 000,5,4
-BSTM,Php 20 001 to Php 60 000,3.333333333,3.555555556
-BSTM,Above Php 60 000,4,3.888888889
-BSTM,Php 20 000 and Below,2.555555556,3.444444444
-BSTM,Above Php 60 000,3.666666667,3.888888889
-BSTM,Php 20 001 to Php 60 000,3.666666667,4.111111111
-BSTM,Above Php 60 000,2.777777778,3.444444444
-BSTM,Php 20 000 and Below,4,3.888888889
-BSTM,Php 20 001 to Php 60 000,2.555555556,3.444444444
-BSHM,Above Php 60 000,3.555555556,3.666666667
-BSHM,Php 20 000 and Below,1.333333333,3.111111111
-BSHM,Php 20 000 and Below,2.555555556,3.666666667
-BSHM,Php 20 000 and Below,3.666666667,3.777777778
-BSHM,Php 20 000 and Below,3,3
-BSTM,Php 20 001 to Php 60 000,2,3.888888889
-BSHM,Php 20 000 and Below,1.888888889,3.111111111
-BSHM,Php 20 000 and Below,2.222222222,2
-BSHM,Php 20 001 to Php 60 000,3.888888889,3.888888889
-BSHM,Php 20 001 to Php 60 000,2.444444444,3.333333333
-BSCM,Php 20 000 and Below,3.444444444,4.666666667
-BSCM,Php 20 000 and Below,2.666666667,3.777777778
-BSCM,Php 20 000 and Below,2.777777778,3
-BSCM,Php 20 001 to Php 60 000,2.666666667,3.888888889
-BSCM,Php 20 000 and Below,2.555555556,5
-BSCM,Php 20 000 and Below,2.888888889,2.444444444
-BSCM,Php 20 000 and Below,2.666666667,3.444444444
-BSCM,Php 20 000 and Below,2.888888889,4.666666667
-BSCM,Php 20 000 and Below,2.555555556,4.777777778
-BSCM,Php 20 000 and Below,2.888888889,3.222222222
-BSCM,Php 20 001 to Php 60 000,2.555555556,3.111111111
-BSCM,Php 20 000 and Below,1.444444444,4.111111111
-BSCM,Php 20 000 and Below,1.666666667,3.333333333
-BSCM,Php 20 000 and Below,1,1
-BSCM,Php 20 000 and Below,2,3.888888889
-BSCM,Php 20 000 and Below,2.777777778,3.777777778
-BSHM,Php 20 000 and Below,4,4.111111111
-BSHM,Php 20 000 and Below,3,2.888888889
-BSCM,Php 20 000 and Below,2.222222222,4.333333333
-BSCM,Php 20 001 to Php 60 000,1.222222222,2.777777778
-BSCM,Php 20 000 and Below,2.333333333,2.888888889
-BSCM,Above Php 60 000,3.333333333,3.888888889
-BSCM,Php 20 000 and Below,3.777777778,3.666666667
-BSCM,Php 20 000 and Below,2.777777778,4.111111111
-BSCM,Php 20 001 to Php 60 000,2.666666667,3.666666667
-BSCM,Php 20 000 and Below,2.888888889,3.222222222
-BSCM,Php 20 001 to Php 60 000,3.333333333,3.444444444
-BSCM,Php 20 000 and Below,3.111111111,3.444444444
-BSHM,Php 20 001 to Php 60 000,3,3
-BSHM,Php 20 000 and Below,2.333333333,3.222222222
-BSHM,Php 20 000 and Below,1.666666667,4.111111111
-BSHM,Php 20 001 to Php 60 000,3.777777778,3.888888889
-BSCM,Php 20 000 and Below,2.111111111,2.444444444
-BSTM,Php 20 000 and Below,2.777777778,3.888888889
-BSTM,Php 20 001 to Php 60 000,2.666666667,2.888888889
-BSCM,Php 20 000 and Below,3.444444444,3.777777778
-BSTM,Php 20 001 to Php 60 000,2.777777778,5
-BSTM,Php 20 001 to Php 60 000,4.888888889,3.111111111
-BSCM,Php 20 000 and Below,2.555555556,4.555555556
-BSTM,Php 20 001 to Php 60 000,3.888888889,2.888888889
-BSTM,Php 20 001 to Php 60 000,3,3
-BSCM,Php 20 001 to Php 60 000,4.222222222,4.888888889
-BSHM,Php 20 000 and Below,1.888888889,2.888888889
-BSHM,Php 20 001 to Php 60 000,3,3
-BSTM,Php 20 000 and Below,3.333333333,3.444444444
-BSCM,Php 20 000 and Below,3.444444444,3.333333333
-BSCM,Php 20 000 and Below,1.888888889,1.888888889
-BSCM,Php 20 001 to Php 60 000,2.333333333,4.555555556
-BSHM,Php 20 000 and Below,2.333333333,4
-BSCM,Php 20 000 and Below,3.222222222,3.222222222
-BSTM,Php 20 000 and Below,3.777777778,4.333333333
-BSHM,Php 20 000 and Below,3,3.333333333
-BSTM,Above Php 60 000,4.333333333,4.444444444
-BSTM,Php 20 001 to Php 60 000,3,4.777777778
-BSHM,Above Php 60 000,3.111111111,2.444444444
-BSCM,Above Php 60 000,3.111111111,3.555555556
-BSTM,Php 20 001 to Php 60 000,3.333333333,2.888888889
-BSHM,Php 20 000 and Below,2.444444444,4
-BSCM,Php 20 000 and Below,1.555555556,2.888888889
-BSCM,Php 20 000 and Below,3.111111111,2.888888889
-BSCM,Php 20 001 to Php 60 000,3.444444444,4.111111111
-BSCM,Php 20 000 and Below,3.888888889,4.555555556
-BSCM,Php 20 000 and Below,2,2.444444444
-BSCM,Php 20 000 and Below,2.666666667,3.111111111
-BSCM,Php 20 000 and Below,2.777777778,2.888888889
-BSHM,Php 20 000 and Below,1.333333333,3
-BSCM,Php 20 000 and Below,2.111111111,4.555555556
-BSTM,Php 20 001 to Php 60 000,3,3.666666667
-BSTM,Php 20 000 and Below,5,5
-BSHM,Php 20 000 and Below,2.777777778,3.555555556
-BSHM,Php 20 001 to Php 60 000,5,2.555555556
-BSHM,Php 20 000 and Below,3,3.888888889
-BSHM,Php 20 001 to Php 60 000,3.666666667,3.777777778
-BSHM,Php 20 000 and Below,3.111111111,4.333333333
-BSTM,Php 20 001 to Php 60 000,3,3.777777778
-BSTM,Above Php 60 000,3.333333333,5
-BSTM,Php 20 000 and Below,2.444444444,3.666666667
-BSCM,Php 20 000 and Below,3.333333333,4.111111111
-BSCM,Php 20 000 and Below,4,4.666666667
-BSCM,Php 20 000 and Below,3,4.444444444
-BSHM,Php 20 001 to Php 60 000,2.444444444,3.555555556
-BSCM,Php 20 000 and Below,2.333333333,4.222222222
-BSCM,Php 20 000 and Below,2.888888889,2.111111111
-BSCM,Php 20 001 to Php 60 000,3.666666667,2.333333333
-BSCM,Php 20 000 and Below,3.888888889,5
-BSBA,Above Php 60 000,2.666666667,4.555555556
-BSBA,Php 20 000 and Below,2.888888889,4.666666667
-BSBA,Php 20 000 and Below,3.555555556,4
-BSBA,Php 20 001 to Php 60 000,4.333333333,3.888888889
-BSBA,Php 20 001 to Php 60 000,3.222222222,3.777777778
-BSBA,Php 20 000 and Below,1.777777778,3.666666667
-BSBA,Php 20 001 to Php 60 000,3.222222222,3.777777778
-BSBA,Php 20 001 to Php 60 000,3,3.888888889
-BSBA,Php 20 001 to Php 60 000,3.111111111,3.888888889
-BSBA,Php 20 000 and Below,2.888888889,3.888888889
-BSHM,Php 20 000 and Below,3.888888889,3.333333333
-BSHM,Php 20 001 to Php 60 000,2.333333333,2.777777778
-BSHM,Php 20 001 to Php 60 000,4,3.555555556
-BSHM,Php 20 001 to Php 60 000,2.777777778,4
-BSBA,Above Php 60 000,3.888888889,4.111111111
-BSHM,Php 20 001 to Php 60 000,2.222222222,3.555555556
-BSHM,Php 20 000 and Below,3.333333333,2
-BSCM,Php 20 001 to Php 60 000,2.777777778,3
-BSCM,Above Php 60 000,2.111111111,1
-BSCM,Php 20 000 and Below,3.444444444,1.444444444
-BSHM,Php 20 001 to Php 60 000,4.111111111,2.111111111
-BSBA,Php 20 000 and Below,4.666666667,3.666666667
-BSBA,Php 20 001 to Php 60 000,3.222222222,3.222222222
-BSBA,Php 20 000 and Below,2.888888889,4.555555556
-BSBA,Php 20 000 and Below,2.444444444,3.888888889
-BSBA,Php 20 000 and Below,3.555555556,3.555555556
-BSBA,Php 20 000 and Below,1.222222222,1.888888889
-BSBA,Php 20 001 to Php 60 000,3,4.888888889
-BSBA,Php 20 001 to Php 60 000,2.666666667,3.777777778
-BSBA,Php 20 000 and Below,2,3.111111111
-BSBA,Above Php 60 000,3.111111111,4.444444444
-BSBA,Php 20 000 and Below,3.555555556,4.111111111
-BSBA,Php 20 000 and Below,1.888888889,4
-BSBA,Php 20 000 and Below,2.333333333,4
-BSBA,Php 20 000 and Below,4.222222222,5
-BSBA,Php 20 000 and Below,2.555555556,3.555555556
-BSBA,Php 20 000 and Below,2.888888889,3.888888889
-BSBA,Php 20 001 to Php 60 000,2.888888889,4.333333333
-BSBA,Php 20 000 and Below,1.888888889,3.444444444
-BSBA,Php 20 001 to Php 60 000,1.666666667,2.555555556
-BSBA,Php 20 000 and Below,4.666666667,4.555555556
-BSBA,Above Php 60 000,4.222222222,4
-BSBA,Php 20 000 and Below,2.555555556,3.111111111
-BSBA,Php 20 001 to Php 60 000,3.444444444,3.111111111
-BSBA,Php 20 000 and Below,3,3.666666667
-BSBA,Php 20 001 to Php 60 000,1.222222222,3.888888889
-BSBA,Php 20 000 and Below,2.222222222,3.777777778
+Sex,Year Level,Course,Income,usagelevel
+Male,First Year,BSTM,Php 20 000 and Below,High
+Female,First Year,BSTM,Above Php 60 000,High
+Male,Second Year,BSTM,Php 20 001 to Php 60 000,Moderate
+Male,Second Year,BSTM,Php 20 001 to Php 60 000,Moderate
+Female,Second Year,BSTM,Php 20 001 to Php 60 000,Moderate
+Female,Second Year,BSTM,Php 20 000 and Below,Moderate
+Female,Second Year,BSTM,Php 20 000 and Below,Moderate
+Female,Second Year,BSTM,Php 20 000 and Below,High
+Female,Second Year,BSTM,Above Php 60 000,Moderate
+Female,Second Year,BSTM,Php 20 001 to Php 60 000,Moderate
+Female,Second Year,BSTM,Php 20 000 and Below,Moderate
+Male,Fourth Year,BSTM,Php 20 001 to Php 60 000,High
+Male,Second Year,BSCM,Php 20 001 to Php 60 000,High
+Female,Fourth Year,BSBA,Php 20 001 to Php 60 000,High
+Female,Fourth Year,BSCM,Php 20 000 and Below,High
+Female,Second Year,BSBA,Php 20 000 and Below,Moderate
+Female,Fourth Year,BSCM,Php 20 001 to Php 60 000,High
+Female,Fourth Year,BSBA,Above Php 60 000,Moderate
+Female,Fourth Year,BSBA,Php 20 000 and Below,Moderate
+Female,Fourth Year,BSCM,Php 20 001 to Php 60 000,Low
+Female,Second Year,BSBA,Php 20 001 to Php 60 000,High
+Female,First Year,BSCM,Php 20 000 and Below,Moderate
+Female,Fourth Year,BSBA,Php 20 000 and Below,High
+Female,Fourth Year,BSBA,Php 20 001 to Php 60 000,Moderate
+Female,Fourth Year,BSCM,Php 20 000 and Below,Moderate
+Male,Second Year,BSHM,Php 20 001 to Php 60 000,Low
+Male,Third Year,BSHM,Php 20 001 to Php 60 000,Moderate
+Male,Fourth Year,BSHM,Php 20 000 and Below,Moderate
+Female,First Year,BSHM,Php 20 000 and Below,Moderate
+Female,Third Year,BSHM,Php 20 000 and Below,Low
+Male,Second Year,BSHM,Php 20 000 and Below,Moderate
+Female,Second Year,BSHM,Php 20 000 and Below,Moderate
+Female,Second Year,BSCM,Php 20 001 to Php 60 000,High
+Female,First Year,BSHM,Php 20 000 and Below,High
+Female,Second Year,BSHM,Php 20 001 to Php 60 000,High
+Female,Fourth Year,BSCM,Php 20 000 and Below,Low
+Female,Fourth Year,BSCM,Php 20 000 and Below,High
+Female,Fourth Year,BSBA,Php 20 000 and Below,Moderate
+Female,Third Year,BSBA,Php 20 000 and Below,Moderate
+Female,First Year,BSTM,Php 20 000 and Below,Moderate
+Female,First Year,BSBA,Php 20 000 and Below,Low
+Female,Fourth Year,BSBA,Php 20 000 and Below,Moderate
+Female,Second Year,BSCM,Above Php 60 000,High
+Female,Third Year,BSBA,Php 20 001 to Php 60 000,High
+Female,Third Year,BSBA,Php 20 000 and Below,Low
+Female,Third Year,BSBA,Php 20 000 and Below,Moderate
+Female,First Year,BSCM,Php 20 000 and Below,High
+Female,Fourth Year,BSHM,Php 20 001 to Php 60 000,High
+Male,Fourth Year,BSHM,Php 20 001 to Php 60 000,Moderate
+Female,Fourth Year,BSTM,Php 20 001 to Php 60 000,Moderate
+Female,Third Year,BSCM,Php 20 000 and Below,Moderate
+Female,Third Year,BSBA,Php 20 001 to Php 60 000,Moderate
+Female,Third Year,BSBA,Php 20 000 and Below,Low
+Female,Fourth Year,BSCM,Php 20 001 to Php 60 000,Low
+Male,Third Year,BSBA,Php 20 000 and Below,Moderate
+Female,Fourth Year,BSCM,Php 20 001 to Php 60 000,High
+Female,Fourth Year,BSTM,Php 20 000 and Below,Moderate
+Female,Third Year,BSBA,Php 20 001 to Php 60 000,Moderate
+Male,Third Year,BSBA,Php 20 001 to Php 60 000,Moderate
+Female,Second Year,BSBA,Php 20 001 to Php 60 000,High
+Female,Third Year,BSBA,Php 20 001 to Php 60 000,High
+Female,First Year,BSBA,Php 20 001 to Php 60 000,Low
+Female,Fourth Year,BSCM,Php 20 000 and Below,High
+Female,Fourth Year,BSBA,Php 20 000 and Below,High
+Male,Fourth Year,BSBA,Above Php 60 000,Moderate
+Female,Fourth Year,BSBA,Php 20 000 and Below,Moderate
+Male,Fourth Year,BSTM,Above Php 60 000,Moderate
+Male,Fourth Year,BSTM,Above Php 60 000,Moderate
+Female,Fourth Year,BSTM,Php 20 001 to Php 60 000,Moderate
+Female,Fourth Year,BSTM,Php 20 001 to Php 60 000,Moderate
+Female,Fourth Year,BSTM,Php 20 001 to Php 60 000,Moderate
+Female,Fourth Year,BSBA,Php 20 001 to Php 60 000,Moderate
+Female,Fourth Year,BSTM,Php 20 001 to Php 60 000,High
+Female,First Year,BSHM,Php 20 001 to Php 60 000,High
+Male,Second Year,BSHM,Php 20 001 to Php 60 000,High
+Female,Third Year,BSHM,Php 20 000 and Below,Moderate
+Female,First Year,BSTM,Php 20 000 and Below,High
+Female,Fourth Year,BSBA,Php 20 000 and Below,Moderate
+Female,Fourth Year,BSBA,Php 20 000 and Below,High
+Female,Fourth Year,BSBA,Php 20 001 to Php 60 000,High
+Female,Fourth Year,BSBA,Php 20 000 and Below,Moderate
+Female,Fourth Year,BSBA,Php 20 001 to Php 60 000,High
+Female,First Year,BSHM,Php 20 000 and Below,High
+Female,Fourth Year,BSTM,Php 20 000 and Below,Moderate
+Male,Fourth Year,BSBA,Php 20 001 to Php 60 000,Moderate
+Male,First Year,BSCM,Php 20 000 and Below,High
+Female,Second Year,BSCM,Php 20 000 and Below,Moderate
+Female,Fourth Year,BSCM,Php 20 000 and Below,Moderate
+Female,Fourth Year,BSBA,Php 20 000 and Below,Moderate
+Female,First Year,BSTM,Php 20 001 to Php 60 000,Moderate
+Female,Third Year,BSTM,Php 20 000 and Below,High
+Female,Third Year,BSTM,Php 20 000 and Below,Moderate
+Female,Third Year,BSTM,Php 20 001 to Php 60 000,High
+Female,Third Year,BSTM,Php 20 000 and Below,Low
+Female,Third Year,BSTM,Php 20 000 and Below,Moderate
+Female,Third Year,BSTM,Php 20 000 and Below,High
+Female,First Year,BSTM,Above Php 60 000,Moderate
+Female,Third Year,BSTM,Php 20 000 and Below,High
+Female,First Year,BSTM,Php 20 000 and Below,Moderate
+Female,First Year,BSTM,Php 20 001 to Php 60 000,High
+Male,First Year,BSTM,Php 20 001 to Php 60 000,High
+Male,First Year,BSTM,Above Php 60 000,Moderate
+Female,Third Year,BSTM,Above Php 60 000,Moderate
+Female,Third Year,BSTM,Above Php 60 000,Moderate
+Male,First Year,BSTM,Php 20 001 to Php 60 000,Moderate
+Female,Third Year,BSTM,Php 20 001 to Php 60 000,Moderate
+Female,First Year,BSTM,Php 20 000 and Below,Moderate
+Female,First Year,BSTM,Php 20 000 and Below,High
+Female,Third Year,BSTM,Php 20 000 and Below,High
+Female,First Year,BSBA,Php 20 001 to Php 60 000,Moderate
+Female,Fourth Year,BSCM,Above Php 60 000,High
+Female,Second Year,BSBA,Above Php 60 000,Moderate
+Female,First Year,BSHM,Php 20 001 to Php 60 000,Moderate
+Male,Third Year,BSHM,Php 20 000 and Below,Moderate
+Male,Fourth Year,BSHM,Php 20 000 and Below,Low
+Female,First Year,BSHM,Php 20 000 and Below,High
+Female,Third Year,BSHM,Php 20 000 and Below,High
+Male,Fourth Year,BSHM,Php 20 001 to Php 60 000,Moderate
+Male,Third Year,BSHM,Php 20 000 and Below,Moderate
+Female,Third Year,BSHM,Php 20 000 and Below,High
+Female,Third Year,BSHM,Php 20 000 and Below,Moderate
+Female,Third Year,BSHM,Php 20 000 and Below,High
+Female,First Year,BSHM,Php 20 000 and Below,Moderate
+Male,Fourth Year,BSHM,Php 20 000 and Below,High
+Female,Third Year,BSHM,Php 20 001 to Php 60 000,High
+Female,Third Year,BSHM,Above Php 60 000,High
+Female,First Year,BSHM,Php 20 001 to Php 60 000,Moderate
+Male,First Year,BSHM,Php 20 001 to Php 60 000,High
+Female,First Year,BSHM,Above Php 60 000,High
+Male,Second Year,BSHM,Php 20 001 to Php 60 000,Moderate
+Male,Second Year,BSHM,Php 20 000 and Below,High
+Male,Second Year,BSHM,Php 20 000 and Below,Moderate
+Male,Second Year,BSHM,Php 20 001 to Php 60 000,High
+Female,Second Year,BSHM,Php 20 000 and Below,Moderate
+Female,First Year,BSTM,Above Php 60 000,High
+Male,First Year,BSTM,Above Php 60 000,High
+Female,First Year,BSTM,Php 20 001 to Php 60 000,High
+Female,Fourth Year,BSTM,Php 20 001 to Php 60 000,High
+Female,Fourth Year,BSTM,Php 20 001 to Php 60 000,Moderate
+Male,Fourth Year,BSTM,Above Php 60 000,High
+Female,Second Year,BSTM,Php 20 000 and Below,Moderate
+Female,Fourth Year,BSTM,Above Php 60 000,High
+Female,Fourth Year,BSTM,Php 20 001 to Php 60 000,High
+Female,Second Year,BSTM,Above Php 60 000,Moderate
+Female,Third Year,BSTM,Php 20 000 and Below,High
+Female,First Year,BSTM,Php 20 001 to Php 60 000,Moderate
+Male,First Year,BSHM,Above Php 60 000,High
+Female,Third Year,BSHM,Php 20 000 and Below,Low
+Male,First Year,BSHM,Php 20 000 and Below,Moderate
+Female,First Year,BSHM,Php 20 000 and Below,High
+Male,Third Year,BSHM,Php 20 000 and Below,Moderate
+Female,Third Year,BSTM,Php 20 001 to Php 60 000,Moderate
+Female,Third Year,BSHM,Php 20 000 and Below,Moderate
+Female,Second Year,BSHM,Php 20 000 and Below,Moderate
+Female,Third Year,BSHM,Php 20 001 to Php 60 000,High
+Female,Third Year,BSHM,Php 20 001 to Php 60 000,Moderate
+Female,Third Year,BSCM,Php 20 000 and Below,High
+Female,Third Year,BSCM,Php 20 000 and Below,Moderate
+Male,Third Year,BSCM,Php 20 000 and Below,Moderate
+Female,Third Year,BSCM,Php 20 001 to Php 60 000,Moderate
+Female,Third Year,BSCM,Php 20 000 and Below,Moderate
+Female,Third Year,BSCM,Php 20 000 and Below,Moderate
+Female,Third Year,BSCM,Php 20 000 and Below,Moderate
+Female,First Year,BSCM,Php 20 000 and Below,Moderate
+Male,First Year,BSCM,Php 20 000 and Below,Moderate
+Female,First Year,BSCM,Php 20 000 and Below,Moderate
+Female,First Year,BSCM,Php 20 001 to Php 60 000,Moderate
+Female,Third Year,BSCM,Php 20 000 and Below,Low
+Male,First Year,BSCM,Php 20 000 and Below,Low
+Female,First Year,BSCM,Php 20 000 and Below,Low
+Female,First Year,BSCM,Php 20 000 and Below,Moderate
+Male,First Year,BSCM,Php 20 000 and Below,Moderate
+Male,Fourth Year,BSHM,Php 20 000 and Below,High
+Female,Fourth Year,BSHM,Php 20 000 and Below,Moderate
+Female,Second Year,BSCM,Php 20 000 and Below,Moderate
+Female,Second Year,BSCM,Php 20 001 to Php 60 000,Low
+Female,Third Year,BSCM,Php 20 000 and Below,Moderate
+Female,Second Year,BSCM,Above Php 60 000,Moderate
+Female,Fourth Year,BSCM,Php 20 000 and Below,High
+Female,Third Year,BSCM,Php 20 000 and Below,Moderate
+Female,Third Year,BSCM,Php 20 001 to Php 60 000,Moderate
+Female,Fourth Year,BSCM,Php 20 000 and Below,Moderate
+Female,Third Year,BSCM,Php 20 001 to Php 60 000,Moderate
+Male,Fourth Year,BSCM,Php 20 000 and Below,Moderate
+Female,Fourth Year,BSHM,Php 20 001 to Php 60 000,Moderate
+Male,Fourth Year,BSHM,Php 20 000 and Below,Moderate
+Male,Fourth Year,BSHM,Php 20 000 and Below,Low
+Male,Fourth Year,BSHM,Php 20 001 to Php 60 000,High
+Male,Fourth Year,BSCM,Php 20 000 and Below,Moderate
+Male,Second Year,BSTM,Php 20 000 and Below,Moderate
+Female,Second Year,BSTM,Php 20 001 to Php 60 000,Moderate
+Female,Third Year,BSCM,Php 20 000 and Below,High
+Female,Fourth Year,BSTM,Php 20 001 to Php 60 000,Moderate
+Male,Fourth Year,BSTM,Php 20 001 to Php 60 000,High
+Female,Second Year,BSCM,Php 20 000 and Below,Moderate
+Female,Third Year,BSTM,Php 20 001 to Php 60 000,High
+Male,Third Year,BSTM,Php 20 001 to Php 60 000,Moderate
+Male,Third Year,BSCM,Php 20 001 to Php 60 000,High
+Male,Second Year,BSHM,Php 20 000 and Below,Moderate
+Male,Second Year,BSHM,Php 20 001 to Php 60 000,Moderate
+Male,Second Year,BSTM,Php 20 000 and Below,Moderate
+Female,First Year,BSCM,Php 20 000 and Below,High
+Female,First Year,BSCM,Php 20 000 and Below,Moderate
+Female,Second Year,BSCM,Php 20 001 to Php 60 000,Moderate
+Male,First Year,BSHM,Php 20 000 and Below,Moderate
+Female,First Year,BSCM,Php 20 000 and Below,Moderate
+Male,First Year,BSTM,Php 20 000 and Below,High
+Male,Fourth Year,BSHM,Php 20 000 and Below,Moderate
+Female,Second Year,BSTM,Above Php 60 000,High
+Female,Third Year,BSTM,Php 20 001 to Php 60 000,Moderate
+Female,Fourth Year,BSHM,Above Php 60 000,Moderate
+Female,Second Year,BSCM,Above Php 60 000,Moderate
+Female,Third Year,BSTM,Php 20 001 to Php 60 000,Moderate
+Female,Third Year,BSHM,Php 20 000 and Below,Moderate
+Female,Second Year,BSCM,Php 20 000 and Below,Low
+Female,Fourth Year,BSCM,Php 20 000 and Below,Moderate
+Female,Second Year,BSCM,Php 20 001 to Php 60 000,High
+Male,Third Year,BSCM,Php 20 000 and Below,High
+Female,Third Year,BSCM,Php 20 000 and Below,Moderate
+Female,Third Year,BSCM,Php 20 000 and Below,Moderate
+Female,Third Year,BSCM,Php 20 000 and Below,Moderate
+Male,First Year,BSHM,Php 20 000 and Below,Low
+Female,First Year,BSCM,Php 20 000 and Below,Moderate
+Female,Fourth Year,BSTM,Php 20 001 to Php 60 000,Moderate
+Female,Second Year,BSTM,Php 20 000 and Below,High
+Female,First Year,BSHM,Php 20 000 and Below,Moderate
+Male,Fourth Year,BSHM,Php 20 001 to Php 60 000,High
+Female,First Year,BSHM,Php 20 000 and Below,Moderate
+Female,First Year,BSHM,Php 20 001 to Php 60 000,High
+Female,Fourth Year,BSHM,Php 20 000 and Below,Moderate
+Male,Third Year,BSTM,Php 20 001 to Php 60 000,Moderate
+Female,Second Year,BSTM,Above Php 60 000,Moderate
+Male,Second Year,BSTM,Php 20 000 and Below,Moderate
+Female,Fourth Year,BSCM,Php 20 000 and Below,Moderate
+Female,First Year,BSCM,Php 20 000 and Below,High
+Female,First Year,BSCM,Php 20 000 and Below,Moderate
+Female,Third Year,BSHM,Php 20 001 to Php 60 000,Moderate
+Female,First Year,BSCM,Php 20 000 and Below,Moderate
+Male,Fourth Year,BSCM,Php 20 000 and Below,Moderate
+Female,Second Year,BSCM,Php 20 001 to Php 60 000,High
+Female,Second Year,BSCM,Php 20 000 and Below,High
+Female,Third Year,BSBA,Above Php 60 000,Moderate
+Female,Third Year,BSBA,Php 20 000 and Below,Moderate
+Female,Third Year,BSBA,Php 20 000 and Below,High
+Male,Second Year,BSBA,Php 20 001 to Php 60 000,High
+Female,Third Year,BSBA,Php 20 001 to Php 60 000,Moderate
+Female,Third Year,BSBA,Php 20 000 and Below,Moderate
+Male,Second Year,BSBA,Php 20 001 to Php 60 000,Moderate
+Male,Second Year,BSBA,Php 20 001 to Php 60 000,Moderate
+Female,Third Year,BSBA,Php 20 001 to Php 60 000,Moderate
+Female,Third Year,BSBA,Php 20 000 and Below,Moderate
+Female,Fourth Year,BSHM,Php 20 000 and Below,High
+Female,Second Year,BSHM,Php 20 001 to Php 60 000,Moderate
+Male,Second Year,BSHM,Php 20 001 to Php 60 000,High
+Male,Second Year,BSHM,Php 20 001 to Php 60 000,Moderate
+Female,First Year,BSBA,Above Php 60 000,High
+Male,Second Year,BSHM,Php 20 001 to Php 60 000,Moderate
+Female,Second Year,BSHM,Php 20 000 and Below,Moderate
+Female,Second Year,BSCM,Php 20 001 to Php 60 000,Moderate
+Female,Second Year,BSCM,Above Php 60 000,Moderate
+Female,Second Year,BSCM,Php 20 000 and Below,High
+Female,Fourth Year,BSHM,Php 20 001 to Php 60 000,High
+Male,First Year,BSBA,Php 20 000 and Below,High
+Female,First Year,BSBA,Php 20 001 to Php 60 000,Moderate
+Female,Second Year,BSBA,Php 20 000 and Below,Moderate
+Female,First Year,BSBA,Php 20 000 and Below,Moderate
+Female,Second Year,BSBA,Php 20 000 and Below,High
+Female,First Year,BSBA,Php 20 000 and Below,Low
+Female,First Year,BSBA,Php 20 001 to Php 60 000,Moderate
+Male,Second Year,BSBA,Php 20 001 to Php 60 000,Moderate
+Female,First Year,BSBA,Php 20 000 and Below,Moderate
+Female,First Year,BSBA,Above Php 60 000,Moderate
+Female,First Year,BSBA,Php 20 000 and Below,High
+Female,First Year,BSBA,Php 20 000 and Below,Moderate
+Male,First Year,BSBA,Php 20 000 and Below,Moderate
+Male,First Year,BSBA,Php 20 000 and Below,High
+Female,First Year,BSBA,Php 20 000 and Below,Moderate
+Male,Second Year,BSBA,Php 20 000 and Below,Moderate
+Male,Second Year,BSBA,Php 20 001 to Php 60 000,Moderate
+Male,Second Year,BSBA,Php 20 000 and Below,Moderate
+Female,Second Year,BSBA,Php 20 001 to Php 60 000,Low
+Female,Second Year,BSBA,Php 20 000 and Below,High
+Female,Second Year,BSBA,Above Php 60 000,High
+Female,Second Year,BSBA,Php 20 000 and Below,Moderate
+Male,First Year,BSBA,Php 20 001 to Php 60 000,High
+Female,First Year,BSBA,Php 20 000 and Below,Moderate
+Female,Second Year,BSBA,Php 20 001 to Php 60 000,Low
+Female,Second Year,BSBA,Php 20 000 and Below,Moderate

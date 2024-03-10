@@ -56,8 +56,11 @@ def app():
     st.write(df)
 
     # load the data and the labels
-    X = df.values[:,0:-1]
-    y = df.values[:,-1]      
+    #X = df.values[:,0:-1]
+    #y = df.values[:,-1]      
+
+    X = df.drop('Usage', axis=1)
+    y = df['Usage']
     
     # Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)

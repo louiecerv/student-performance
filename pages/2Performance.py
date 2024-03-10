@@ -66,13 +66,13 @@ def app():
     options = ['Extra Trees Classifier', 'SVM', 'Decision Tree', 'Gradient Boosting']
     selected_option = st.sidebar.selectbox('Select the classifier', options)
     if selected_option=='Extra Trees Regressor':        
-        clf = ExtraTreesRegressor(n_estimators=100, random_state=0)
+        clf = ExtraTreesClassifier()
         st.session_state['selected_model'] = 0
     elif selected_option=='SVR Regressor':        
-        clf = SVR()
+        clf = SVC()
         st.session_state['selected_model'] = 1
     elif selected_option == 'Decision Tree':
-        clf = DecisionTreeRegressor()
+        clf = DecisionTreeClassifier()
         st.session_state['selected_model'] = 2
     elif selected_option == 'Gradient Boosting':
         clf = GradientBoostingClassifier(n_estimators=100, learning_rate=1.0, max_depth=3)

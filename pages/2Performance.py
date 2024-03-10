@@ -61,11 +61,6 @@ def app():
     y_train= st.session_state['y_train']
     y_test = st.session_state['y_test']
 
-    clf = LogisticRegression()
-    clf = SVR()
-    DecisionTreeRegressor()
-    GradientBoostingRegressor()
-
     st.sidebar.subheader('Select the classifier')
 
     # Create the selection of classifier

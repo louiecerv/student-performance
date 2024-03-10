@@ -32,8 +32,6 @@ def app():
 
     st.write('Browse the dataset')
     st.write(df)
-    st.write('Descriptive Statistics')
-    st.write(df.info())
     
     
     for i in range(100):

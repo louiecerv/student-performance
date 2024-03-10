@@ -18,7 +18,7 @@ def app():
     if "le_list" not in st.session_state:
         st.session_state.le_list = []
 
-    st.subheader('The task: Classify respondent g-banking usage as either low or high.')
+    st.subheader('The task: Classify respondent g-banking usage as either low, moderate or high.')
     text = """Describe the dataset and the various algorithms here."""
     st.write(text)
 
@@ -31,10 +31,6 @@ def app():
     st.write(df)
 
     le = LabelEncoder()
-
-      # Separate features and target column
-    features = df.drop('Usage', axis=1)
-    target = df['Usage']
 
     #Get the list of column names
     column_names = features.columns.tolist()
@@ -49,18 +45,12 @@ def app():
 
     # save the label encoder to the session state
     st.session_state["le"] = le_list
-    # Combine encoded features and target column
-    df = pd.concat([features, target], axis=1)
     
     st.write('After encoding to numbers')
     st.write(df)
-
-    # load the data and the labels
-    #X = df.values[:,0:-1]
-    #y = df.values[:,-1]      
-
-    X = df.drop('Usage', axis=1)
-    y = df['Usage']
+    
+    X = df.drop('usagelevel', axis=1)
+    y = df['usagelevel']
     
     # Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)

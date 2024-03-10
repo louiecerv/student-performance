@@ -69,11 +69,12 @@ def app():
     st.sidebar.subheader('Select the classifier')
 
     # Create the selection of classifier
-    clf = LogisticRegression(solver='lbfgs', multi_class='multinomial')
-    st.session_state['selected_model'] = 0
     options = ['Logistic Regression', 'SVR Regressor', 'Decision Tree', 'Gradient Boosting']
     selected_option = st.sidebar.selectbox('Select the classifier', options)
-    if selected_option=='SVR Regressor':        
+    if selected_option=='Logistic Regression':        
+        clf = LogisticRegression(solver='lbfgs', multi_class='multinomial')
+        st.session_state['selected_model'] = 0
+    elif selected_option=='SVR Regressor':        
         clf = SVR()
         st.session_state['selected_model'] = 1
     elif selected_option == 'Decision Tree':
@@ -83,6 +84,8 @@ def app():
         clf = GradientBoostingRegressor()
         st.session_state['selected_model'] = 3
 
+    st.write(X_train)
+    
     clf.fit(X_train, y_train)
     y_test_pred = clf.predict(X_test)
 

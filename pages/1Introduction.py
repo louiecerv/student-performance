@@ -38,8 +38,8 @@ def app():
     le = LabelEncoder()
 
       # Separate features and target column
-    features = df.drop(target_column, axis=1)
-    target = df[target_column]
+    features = df.drop('Usage', axis=1)
+    target = df['Usage']
 
     #Get the list of column names
     column_names = features.columns.tolist()

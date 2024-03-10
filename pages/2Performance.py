@@ -5,13 +5,12 @@ import streamlit as st
 import altair as alt
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import train_test_split
-from sklearn.ensemble import ExtraTreesRegressor
-from sklearn.svm import SVR
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.ensemble import GradientBoostingRegressor
-from sklearn.metrics import r2_score, mean_squared_error
+from sklearn.metrics import classification_report
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import ExtraTreesClassifier
+from sklearn.ensemble import GradientBoostingClassifier
 
 
 
@@ -64,7 +63,7 @@ def app():
     st.sidebar.subheader('Select the classifier')
 
     # Create the selection of classifier
-    options = ['Extra Trees Regressor', 'SVR Regressor', 'Decision Tree', 'Gradient Boosting']
+    options = ['Extra Trees Classifier', 'SVM', 'Decision Tree', 'Gradient Boosting']
     selected_option = st.sidebar.selectbox('Select the classifier', options)
     if selected_option=='Extra Trees Regressor':        
         clf = ExtraTreesRegressor(n_estimators=100, random_state=0)
@@ -76,19 +75,19 @@ def app():
         clf = DecisionTreeRegressor()
         st.session_state['selected_model'] = 2
     elif selected_option == 'Gradient Boosting':
-        clf = GradientBoostingRegressor()
+        clf = GradientBoostingClassifier(n_estimators=100, learning_rate=1.0, max_depth=3)
         st.session_state['selected_model'] = 3
 
     clf.fit(X_train, y_train)
     y_test_pred = clf.predict(X_test)
 
-    st.subheader('R-squared')
-    r2 = r2_score(y_test, y_test_pred)
-    st.write(f"R-squared: {r2:.4f}")
+    st.subheader('Confusion Matrix')
+    st.write('Confusion Matrix')
+    cm = confusion_matrix(y_test, y_test_pred)
+    st.text(cm)
 
-    st.subheader('Mean Squared Error (MSE)')
-    mse = mean_squared_error(y_test, y_test_pred)
-    st.write(f"MSE: {mse:.4f}")
+    st.subheader('Performance Metrics')
+    st.text(classification_report(y_test, y_test_pred))
     
     st.write(classifier)
     st.write(report)

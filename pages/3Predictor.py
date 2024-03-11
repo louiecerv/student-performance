@@ -66,12 +66,11 @@ def app():
 
         text = """The potential uses of E-Banking Usage level prediction:
         \n1. Targeted Marketing and Promotions:
-        Banks can leverage the 
-        model to identify customer segments with high e-banking usage 
-        propensity. Based on these segments, banks can design targeted 
-        marketing campaigns promoting features and benefits of their 
-        e-banking platforms.This can lead to increased adoption and 
-        usage of e-banking services.
+        Banks can leverage the model to identify customer segments with
+        high e-banking usage propensity. Based on these segments, banks 
+        can design targeted marketing campaigns promoting features and 
+        benefits of their e-banking platforms.This can lead to increased 
+        adoption and usage of e-banking services.
         \n2. Fraud Detection and Risk Management:
         The model can be used to identify patterns in e-banking behavior 
         that deviate from a user's usual activity. This can be helpful in 

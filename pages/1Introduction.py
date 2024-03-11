@@ -33,6 +33,8 @@ def app():
 
     plot_feature(df, "usagelevel", "Usage Level", "Distribution of E-banking Usage Level")
 
+    plot_feature(df, "Sex", "Sex", "Distribution of Sex")
+
     # encode the data to numeric
     le = LabelEncoder()
     #Get the list of column names

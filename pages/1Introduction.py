@@ -31,32 +31,21 @@ def app():
     st.write('Browse the dataset')
     st.write(df)
 
-
-    desired_order = ["very low", "low", "moderate", "high", "very high"]
-
-    # Reshape data and set categorical dtype
-    df_counts = (
-        df.value_counts("usagelevel")
-        .reset_index(name="count")
-        .assign(usagelevel=pd.api.types.CategoricalDtype(categories=desired_order))
-    )
-
-    # Create the bar plot with categorical data handling
+    # Show the distribution of usagelevel
     fig, ax = plt.subplots(figsize=(5, 5))
     p = sns.barplot(
-        y="usagelevel",
-        x="count",
-        data=df_counts,
-        palette="bright",
+    y="usagelevel",  
+    x="count",  
+    data=df.value_counts("usagelevel").reset_index(name="count"),  # Reshape data for counting
+    palette="bright"  # Set color palette
     )
-
-    # Customize plot elements
     ax.set_title("Distribution of E-banking Usage Level", fontsize=14)
     ax.bar_label(ax.containers[0])  # Add frequency counts to the bars
-    plt.tight_layout()
 
     # Display the plot
+    plt.tight_layout()  # Prevent overlapping elements
     st.pyplot(fig)
+
 
     # encode the data to numeric
     le = LabelEncoder()

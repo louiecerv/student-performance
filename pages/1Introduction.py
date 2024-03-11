@@ -78,11 +78,19 @@ def app():
     st.write('Descriptive Statistics')
     st.write(df.describe().T)
     
+    # Display unique values for each column
+    st.write("\n**Unique Values:**")
+    for col, values in unique_values.items():
+        st.write(f"- {col}: {', '.join(map(str, values))}")
+            
     X = df.drop('usagelevel', axis=1)
     y = df['usagelevel']
     
     # Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+
+
 
     #save the values to the session state    
     st.session_state['X_train'] = X_train
@@ -94,7 +102,7 @@ def app():
         # Update progress bar value
         st.progress_bar.progress(i + 1)
         # Simulate some time-consuming task (e.g., sleep)
-        time.sleep(0.01)
+        time.sleep(0.01)        
     st.success("Data visualization completed!")
 
 def plot_feature(df, feature, feature_label, title):

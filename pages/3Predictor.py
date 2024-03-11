@@ -16,6 +16,7 @@ from sklearn.svm import SVC
 # Define the Streamlit app
 def app():
 
+"""
     st.write("""The trained model will predict the Usage Level from the information provided.""")
     st.subheader('User Information')
     gender = form3.selectbox('Gender:', ['Male', 'Female'])
@@ -24,6 +25,8 @@ def app():
     st.session_state['age'] = age
     educlevel = form3.selectbox('Education Level:', ['School', 'College', 'University'])
 
+    """
+    
 #run the app
 if __name__ == "__main__":
     app()

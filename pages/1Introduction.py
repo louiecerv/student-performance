@@ -63,7 +63,7 @@ def app():
     st.write("\n**Unique Values:**")
     for col, values in unique_values.items():
         st.write(f"- {col}: {', '.join(map(str, values))}")
-        
+
 
     # encode the data to numeric
     le = LabelEncoder()
@@ -79,7 +79,7 @@ def app():
         df[cn] = le.transform(df[cn])  # Transform the column using the fitted encoder
 
     # save the label encoder to the session state
-    st.session_state["le"] = le_list
+    st.session_state["le_list"] = le_list
     st.session_state['df'] = df    
 
     st.write('The Dataset after encoding features to numbers')

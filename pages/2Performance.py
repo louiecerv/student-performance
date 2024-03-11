@@ -113,7 +113,7 @@ def app():
     st.text(classification_report(y_test, y_test_pred))
 
     text = """The classification_report function in scikit-learn provides a detailed breakdown
-    of the performance of your classification model for a multi-class problem, 
+    of the performance of the classification model for a multi-class problem, 
     in this case, with five classes: "very low", "low", "moderate", "high", and "very high". 
     \nClass labels:  This section lists all the five classes present in your data 
     ("very low", "low", "moderate", "high", "very high").

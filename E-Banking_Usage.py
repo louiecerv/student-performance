@@ -55,7 +55,7 @@ def app():
     with permission from an undergraduate thesis paper:"""
     st.write(text)  
     st.markdown("Baldevarona, A. M. G., Banggud, R. B., Gronifillo, G. C., Honrado, \
-        S. R. B., & Jamelarin,  R. J. E. L. *E-banking usage level and influence on 
+        S. R. B., & Jamelarin,  R. J. E. L. *E-banking usage level and influence on \
                 spending habits among College of Business and Management students.* 
                 Unpublished undergraduate thesis. (2024)")
 

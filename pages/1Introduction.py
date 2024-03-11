@@ -65,7 +65,7 @@ def app():
     ax.bar_label(ax.containers[0])  # Add frequency counts to the bars
     plt.xticks(rotation=45, ha="right")  # Rotate x-axis labels for better readability
     plt.tight_layout()
-    st.ptplot(fig)
+    st.pyplot(fig)
 
 
     # encode the data to numeric

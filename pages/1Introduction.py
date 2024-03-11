@@ -77,6 +77,10 @@ def app():
 
     st.write('Descriptive Statistics')
     st.write(df.describe().T)
+
+    # Get column names and unique values
+    columns = df.columns
+    unique_values = {col: df[col].unique() for col in columns}    
     
     # Display unique values for each column
     st.write("\n**Unique Values:**")
@@ -88,9 +92,6 @@ def app():
     
     # Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-
-
 
     #save the values to the session state    
     st.session_state['X_train'] = X_train

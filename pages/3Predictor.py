@@ -32,7 +32,7 @@ def app():
     st.subheader('User Information')
     update_selections()
 
-    if button("Start"):
+    if st.button("Start"):
         st.write('Unencoded user inputs:')
         user_inputs = np.array(st.session_state['user_inputs'])
         st.write(user_inputs)

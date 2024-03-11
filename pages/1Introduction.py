@@ -41,7 +41,8 @@ def app():
         y="usagelevel",
         x="count",
         data=df_counts,
-        palette="bright"  # Adjust palette as desired (see seaborn color palettes)
+        palette="bright",  # Adjust palette as desired (see seaborn color palettes)
+        hue = "usagelevel"
     )
     # Customize plot elements
     ax.set_title("Distribution of E-banking Usage Level", fontsize=14)

@@ -105,7 +105,7 @@ def countplot(df, feature, title):
     fig, ax = plt.subplots(figsize=(6, 3))
     # Create the countplot with clear title and legend
     p = sns.countplot(x=feature, data = df, hue='usagelevel',  palette='bright')
-    ax.set_title(, fontsize=14)
+    ax.set_title(title, fontsize=14)
 
     # Display the plot
     plt.tight_layout()  # Prevent overlapping elements

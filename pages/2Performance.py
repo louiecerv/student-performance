@@ -43,6 +43,57 @@ def app():
     clf.fit(X_train, y_train)
     y_test_pred = clf.predict(X_test)
 
+    classifier = ''
+    if st.session_state['selected_model'] == 0:     
+        classifier = 'Extra Trees Classifier'
+        report = """Extra Trees Classifier is a machine learning method for classification tasks. 
+        It belongs to a family of algorithms called ensemble methods, which combine multiple
+         models (in this case, decision trees) to get a better prediction than any single model.
+         It builds multiple decision trees, but with randomness injected at two key points: 
+         selecting features and choosing split points within those features. This randomness 
+         helps reduce overfitting by making the trees more independent."""
+        
+    elif st.session_state['selected_model'] == 1:   
+        classifier = "Support Vector Machine Classifier"
+        report = """A support vector machine (SVM) is a machine learning algorithm that excels at 
+        classifying data points.  SVMs find te line (or hyperplane in higher dimensions) 
+        that maximizes the margin between the two classes. A wider margin translates to a 
+        better separation and potentially better classification on unseen data. SVMs are 
+        particularly useful for: High dimensional data: They can handle complex data 
+        with many features. Smaller datasets: They can perform well even with limited 
+        training data. Non-linear classification: By using kernel functions, 
+        SVMs can handle data that isn't easily separable with a straight line."""
+        
+    elif st.session_state['selected_model'] == 2:  
+        classifier = "Decision Tree Classifier"
+        report = """A decision tree classifier is a machine learning algorithm that works 
+        by building a tree-like model to classify data. It asks a series of questions 
+        about the data's features at each branch of the tree, and based on the answers, 
+        it directs the data down a specific path until it reaches a leaf node that 
+        contains the predicted classification. 
+        Easy to understand and interpret: The decision-making process is clear and 
+        transparent, unlike some other machine learning models. Good for handling 
+        high-dimensional data: They can work well with data that has many features. 
+        Fast training time: Compared to some other algorithms, decision trees can be 
+        trained relatively quickly."""
+
+    else:   #Gradient Boosting
+        classifier = "Gradient Boosting Classifier"
+        report = """Gradient boosting classifier is a machine learning technique that 
+        combines multiple weak models, like decision trees, into a single strong 
+        learner. Here's the gist of how it works:
+        \nTrain a weak learner on the data. Analyze the errors from that model's 
+        predictions. Train a second weak learner to specifically address those errors. 
+        Combine the predictions from both weak learners. By combining these weak 
+        learners, the gradient boosting classifier becomes much better at predicting 
+        the target variable than any of the individual weak models could be on their own."""
+
+    st.subheader('Performance of the ' + classifier)
+
+    st.write(classifier)
+    st.write(report)
+
+
     st.subheader('Confusion Matrix')
     st.write('Confusion Matrix:')
     cm = confusion_matrix(y_test, y_test_pred)
@@ -82,56 +133,7 @@ def app():
     \nSupport: This column shows the total number of true instances for each class in 
     the test data. It shows the class distribution and identify potential
     issues due to class imbalance."""
-    classifier = ''
-    if st.session_state['selected_model'] == 0:     
-        classifier = 'Extra Trees Classifier'
-        report = """Extra Trees Classifier is a machine learning method for classification tasks. 
-        It belongs to a family of algorithms called ensemble methods, which combine multiple
-         models (in this case, decision trees) to get a better prediction than any single model.
-         It builds multiple decision trees, but with randomness injected at two key points: 
-         selecting features and choosing split points within those features. This randomness 
-         helps reduce overfitting by making the trees more independent."""
-        
-    elif st.session_state['selected_model'] == 1:   
-        classifier = "Support Vector Machine"
-        report = """A support vector machine (SVM) is a machine learning algorithm that excels at 
-        classifying data points.  SVMs find te line (or hyperplane in higher dimensions) 
-        that maximizes the margin between the two classes. A wider margin translates to a 
-        better separation and potentially better classification on unseen data. SVMs are 
-        particularly useful for: High dimensional data: They can handle complex data 
-        with many features. Smaller datasets: They can perform well even with limited 
-        training data. Non-linear classification: By using kernel functions, 
-        SVMs can handle data that isn't easily separable with a straight line."""
-        
-    elif st.session_state['selected_model'] == 2:  
-        classifier = "Decision Tree"
-        report = """A decision tree classifier is a machine learning algorithm that works 
-        by building a tree-like model to classify data. It asks a series of questions 
-        about the data's features at each branch of the tree, and based on the answers, 
-        it directs the data down a specific path until it reaches a leaf node that 
-        contains the predicted classification. 
-        Easy to understand and interpret: The decision-making process is clear and 
-        transparent, unlike some other machine learning models. Good for handling 
-        high-dimensional data: They can work well with data that has many features. 
-        Fast training time: Compared to some other algorithms, decision trees can be 
-        trained relatively quickly."""
 
-    else:   #Gradient Boosting
-        classifier = "Gradient Boosting"
-        report = """Gradient boosting classifier is a machine learning technique that 
-        combines multiple weak models, like decision trees, into a single strong 
-        learner. Here's the gist of how it works:
-        \nTrain a weak learner on the data. Analyze the errors from that model's 
-        predictions. Train a second weak learner to specifically address those errors. 
-        Combine the predictions from both weak learners. By combining these weak 
-        learners, the gradient boosting classifier becomes much better at predicting 
-        the target variable than any of the individual weak models could be on their own."""
-
-
-    st.subheader('Performance of the ' + classifier)
-
-    st.write(classifier)
-    st.write(report)
 
     # save the clf to the session state
     st.session_state['clf'] = clf

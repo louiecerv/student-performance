@@ -133,6 +133,7 @@ def app():
     \nSupport: This column shows the total number of true instances for each class in 
     the test data. It shows the class distribution and identify potential
     issues due to class imbalance."""
+    st.write(text)
 
 
     # save the clf to the session state

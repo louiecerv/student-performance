@@ -32,14 +32,10 @@ def app():
     st.write(df)
 
     # Show the distribution of usagelevel
-	# Define the desired order
-    desired_order = ["very low", "low", "moderate", "high", "very high"]
-	
     fig, ax = plt.subplots(figsize=(5, 5))
     p = sns.barplot(
     y="usagelevel",  
     x="count",  
-    order=desired_order,
     data=df.value_counts("usagelevel").reset_index(name="count"),  # Reshape data for counting
     palette="bright"  # Set color palette
     )

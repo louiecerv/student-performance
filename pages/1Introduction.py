@@ -31,8 +31,25 @@ def app():
     st.write('Browse the dataset')
     st.write(df)
 
-    le = LabelEncoder()
+    # Show the distribution of usagelevel
+    fig, ax = plt.subplots(figsize=(5, 5))
+    # Create the countplot with clear title and legend
+    p = sns.barplot(
+    y="usagelevel",  
+    x="count",  
+    order=df["usagelevel"].value_counts().index,  # Order bars based on counts
+    data=df.value_counts("usagelevel").reset_index(name="count"),  # Reshape data for counting
+    palette="bright"  # Set color palette
+    )
+    ax.set_title("Distribution of E-banking Usage Level", fontsize=14)
+    ax.bar_label(ax.containers[0])  # Add frequency counts to the bars
 
+    # Display the plot
+    plt.tight_layout()  # Prevent overlapping elements
+    st.pyplot(fig)
+
+    # encode the data to numeric
+    le = LabelEncoder()
     #Get the list of column names
     column_names = df.columns.tolist()
 
@@ -62,23 +79,6 @@ def app():
     st.session_state['X_test'] = X_test
     st.session_state['y_train'] = y_train
     st.session_state['y_test'] = y_test    
-
-    # Show the distribution of usagelevel
-    fig, ax = plt.subplots(figsize=(5, 5))
-    # Create the countplot with clear title and legend
-    p = sns.barplot(
-    y="usagelevel",  
-    x="count",  
-    order=df["usagelevel"].value_counts().index,  # Order bars based on counts
-    data=df.value_counts("usagelevel").reset_index(name="count"),  # Reshape data for counting
-    palette="bright"  # Set color palette
-    )
-    ax.set_title("Distribution of E-banking Usage Level", fontsize=14)
-    ax.bar_label(ax.containers[0])  # Add frequency counts to the bars
-
-    # Display the plot
-    plt.tight_layout()  # Prevent overlapping elements
-    st.pyplot(fig)
 
     for i in range(100):
         # Update progress bar value

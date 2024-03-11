@@ -78,8 +78,7 @@ def app():
 
     # Display the plot
     plt.tight_layout()  # Prevent overlapping elements
-    plt.show()
-
+    st.pyplot(fig)
 
     for i in range(100):
         # Update progress bar value

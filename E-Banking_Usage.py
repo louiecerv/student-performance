@@ -54,8 +54,8 @@ def app():
     text = """Dataset for E-Banking Usage and Spending Habits of CBM Students at WVSU is used 
     with permission from an undergraduate thesis paper:
     \nBaldevarona, A. M. G., Banggud, R. B., Gronifillo, G. C., Honrado, S. R. B., & Jamelarin, 
-    R. J. E. L. E-banking usage level and influence on spending habits among 
-    College of Business and Management students. (2024)
+    R. J. E. L. <i>E-banking usage level and influence on spending habits among 
+    College of Business and Management students. </i> (2024)
 
     \nThis dataset investigates the factors that affect the e-banking usage and 
     spending habits among College of Business Management (CBM) students at 

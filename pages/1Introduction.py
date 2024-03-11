@@ -81,7 +81,7 @@ def plot_feature(df, feature, feature_label, title):
         #df_counts = df["usagelevel"].value_counts().reset_index(name="count")
         df_counts = df[feature].value_counts().reset_index(name="count")
         # Create the bar plot
-        fig, ax = plt.subplots(figsize=(8, 4))  # Adjust figure size as needed
+        fig, ax = plt.subplots(figsize=(8, 3))  # Adjust figure size as needed
         p = sns.barplot(
             y=feature,
             x="count",

@@ -46,6 +46,27 @@ def app():
     plt.tight_layout()  # Prevent overlapping elements
     st.pyplot(fig)
 
+    # Create a DataFrame showing the count of each usage level
+    df_counts = df["usagelevel"].value_counts().reset_index(name="count")
+
+    # Create the bar plot
+    fig, ax = plt.subplots(figsize=(8, 6))  # Adjust figure size as needed
+    p = sns.barplot(
+        y="usagelevel",
+        x="count",
+        data=df_counts,
+        palette="bright"  # Adjust palette as desired (see seaborn color palettes)
+    )
+
+    # Customize plot elements
+    ax.set_title("Distribution of E-banking Usage Level", fontsize=14)
+    ax.set_xlabel("Count", fontsize=12)
+    ax.set_ylabel("Usage Level", fontsize=12)
+    ax.bar_label(ax.containers[0])  # Add frequency counts to the bars
+    plt.xticks(rotation=45, ha="right")  # Rotate x-axis labels for better readability
+    plt.tight_layout()
+    st.ptplot(fig)
+
 
     # encode the data to numeric
     le = LabelEncoder()

@@ -31,27 +31,7 @@ def app():
     st.write('Browse the dataset')
     st.write(df)
 
-    # Show the distribution of usagelevel
-    # Create a DataFrame showing the count of each usage level
-    #df_counts = df["usagelevel"].value_counts().reset_index(name="count")
-    df_counts = df["usagelevel"].value_counts().reset_index(name="count")
-    # Create the bar plot
-    fig, ax = plt.subplots(figsize=(8, 4))  # Adjust figure size as needed
-    p = sns.barplot(
-        y="usagelevel",
-        x="count",
-        data=df_counts,
-        palette="bright",  # Adjust palette as desired (see seaborn color palettes)
-        hue = "usagelevel"
-    )
-    # Customize plot elements
-    ax.set_title("Distribution of E-banking Usage Level", fontsize=14)
-    ax.set_xlabel("Count", fontsize=12)
-    ax.set_ylabel("Usage Level", fontsize=12)
-    ax.bar_label(ax.containers[0])  # Add frequency counts to the bars
-    plt.xticks(rotation=45, ha="right")  # Rotate x-axis labels for better readability
-    plt.tight_layout()
-    st.pyplot(fig)
+    plotfeature(df, "usagelevel", "Usage Level", "Distribution of E-banking Usage Level")
 
     # encode the data to numeric
     le = LabelEncoder()
@@ -91,6 +71,28 @@ def app():
         # Simulate some time-consuming task (e.g., sleep)
         time.sleep(0.01)
     st.success("Data visualization completed!")
+
+def plot_feature(df, feature, title):
+        # Show the distribution of usagelevel
+        #df_counts = df["usagelevel"].value_counts().reset_index(name="count")
+        df_counts = df[feature].value_counts().reset_index(name="count")
+        # Create the bar plot
+        fig, ax = plt.subplots(figsize=(8, 4))  # Adjust figure size as needed
+        p = sns.barplot(
+            y=feature,
+            x="count",
+            data=df_counts,
+            palette="bright",  # Adjust palette as desired (see seaborn color palettes)
+            hue = "usagelevel"
+        )
+        # Customize plot elements
+        ax.set_title(title, fontsize=14)
+        ax.set_xlabel("Count", fontsize=12)
+        ax.set_ylabel(feature_label, fontsize=12)
+        ax.bar_label(ax.containers[0])  # Add frequency counts to the bars
+        plt.xticks(rotation=45, ha="right")  # Rotate x-axis labels for better readability
+        plt.tight_layout()
+        st.pyplot(fig)
 
 #run the app
 if __name__ == "__main__":

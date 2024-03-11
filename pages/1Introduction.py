@@ -25,11 +25,11 @@ def app():
     #replace with your dataset
     df = pd.read_csv('e-banking3.csv', header=0)
 
-    # Create a progress bar object
-    st.progress_bar = st.progress(0, text="Generating data graphs please wait...")
-
     st.write('Browse the dataset')
     st.write(df)
+
+    # Create a progress bar object
+    st.progress_bar = st.progress(0, text="Generating data graphs please wait...")
 
     plot_feature(df, "usagelevel", "Usage Level", "Distribution of E-banking Usage Level")
     plot_feature(df, "Sex", "Sex", "Distribution of Sex")
@@ -37,8 +37,10 @@ def app():
     plot_feature(df, "Course", "Course", "Distribution of Course")
     plot_feature(df, "Income", "Income", "Distribution of Family Income")
 
-    countplot(df, "Sex", "Difference in Usage According to Sex")
-    countplot(df, "Year Level", "Difference in Usage According to Year Level")
+    countplot(df, "Sex", "Differences in E-Benking Usage According to Sex")
+    countplot(df, "Year Level", "Differences in E-Banking Usage According to Year Level")
+    countplot(df, "Course", "Differences in E-Banking Usage According to Course")
+    countplot(df, "Income", "Differences in E-Banking Usage According to Family Income")
 
     # encode the data to numeric
     le = LabelEncoder()

@@ -55,6 +55,16 @@ def app():
     countplot(df, "Course", "Differences in E-Banking Usage According to Course")
     countplot(df, "Income", "Differences in E-Banking Usage According to Family Income")
 
+    # Get column names and unique values
+    columns = df.columns
+    unique_values = {col: df[col].unique() for col in columns}    
+    
+    # Display unique values for each column
+    st.write("\n**Unique Values:**")
+    for col, values in unique_values.items():
+        st.write(f"- {col}: {', '.join(map(str, values))}")
+        
+
     # encode the data to numeric
     le = LabelEncoder()
     #Get the list of column names
@@ -78,14 +88,6 @@ def app():
     st.write('Descriptive Statistics')
     st.write(df.describe().T)
 
-    # Get column names and unique values
-    columns = df.columns
-    unique_values = {col: df[col].unique() for col in columns}    
-    
-    # Display unique values for each column
-    st.write("\n**Unique Values:**")
-    for col, values in unique_values.items():
-        st.write(f"- {col}: {', '.join(map(str, values))}")
             
     X = df.drop('usagelevel', axis=1)
     y = df['usagelevel']

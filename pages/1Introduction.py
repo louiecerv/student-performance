@@ -31,15 +31,17 @@ def app():
     st.write('Browse the dataset')
     st.write(df)
 
+
     desired_order = ["very low", "low", "moderate", "high", "very high"]
-    # Reshape data and set the categorical order explicitly
+
+    # Reshape data and set categorical dtype
     df_counts = (
         df.value_counts("usagelevel")
         .reset_index(name="count")
-        .astype({"usagelevel": "category"})  # Set as categorical
-        .cat.reorder_categories(desired_order, inplace=True)  # Reorder
+        .assign(usagelevel=pd.api.types.CategoricalDtype(categories=desired_order))
     )
-    # Create the bar plot with the correct order
+
+    # Create the bar plot with categorical data handling
     fig, ax = plt.subplots(figsize=(5, 5))
     p = sns.barplot(
         y="usagelevel",
@@ -47,6 +49,7 @@ def app():
         data=df_counts,
         palette="bright",
     )
+
     # Customize plot elements
     ax.set_title("Distribution of E-banking Usage Level", fontsize=14)
     ax.bar_label(ax.containers[0])  # Add frequency counts to the bars
@@ -54,8 +57,6 @@ def app():
 
     # Display the plot
     st.pyplot(fig)
-
-
 
     # encode the data to numeric
     le = LabelEncoder()

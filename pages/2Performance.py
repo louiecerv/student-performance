@@ -44,7 +44,7 @@ def app():
     y_test_pred = clf.predict(X_test)
 
     st.subheader('Confusion Matrix')
-    st.write('Confusion Matrix')
+    st.write('Confusion Matrix:')
     cm = confusion_matrix(y_test, y_test_pred)
     st.text(cm)
     text = """Key elements in a Confusion Matrix

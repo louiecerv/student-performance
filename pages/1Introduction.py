@@ -33,7 +33,8 @@ def app():
 
     # Show the distribution of usagelevel
     # Create a DataFrame showing the count of each usage level
-    df_counts = df["usagelevel"].value_counts().reset_index(name="count")
+    #df_counts = df["usagelevel"].value_counts().reset_index(name="count")
+    df_counts = df["usagelevel"].value_counts())
     # Create the bar plot
     fig, ax = plt.subplots(figsize=(8, 4))  # Adjust figure size as needed
     p = sns.barplot(

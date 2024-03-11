@@ -85,7 +85,7 @@ def plot_feature(df, feature, feature_label, title):
             x="count",
             data=df_counts,
             palette="bright",  # Adjust palette as desired (see seaborn color palettes)
-            hue = "usagelevel"
+            hue = feature
         )
         # Customize plot elements
         ax.set_title(title, fontsize=14)

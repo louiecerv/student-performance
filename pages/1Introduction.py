@@ -63,6 +63,24 @@ def app():
     st.session_state['y_train'] = y_train
     st.session_state['y_test'] = y_test    
 
+    # Show the distribution of usagelevel
+    fig, ax = plt.subplots(figsize=(5, 2))
+    # Create the countplot with clear title and legend
+    p = sns.barplot(
+    y="usagelevel",  # Specify "Sex" as the y-axis for horizontal orientation
+    x="count",  # Count occurrences for each "Sex" value in df
+    order=df["usagelevel"].value_counts().index,  # Order bars based on counts
+    data=df.value_counts("usagelevel").reset_index(name="count"),  # Reshape data for counting
+    palette="bright"  # Set color palette
+    )
+    ax.set_title("Distribution of E-banking Usage Level", fontsize=14)
+    ax.bar_label(ax.containers[0])  # Add frequency counts to the bars
+
+    # Display the plot
+    plt.tight_layout()  # Prevent overlapping elements
+    plt.show()
+
+
     for i in range(100):
         # Update progress bar value
         st.progress_bar.progress(i + 1)

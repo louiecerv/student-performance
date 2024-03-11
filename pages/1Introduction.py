@@ -32,8 +32,10 @@ def app():
     st.write(df)
 
     plot_feature(df, "usagelevel", "Usage Level", "Distribution of E-banking Usage Level")
-
     plot_feature(df, "Sex", "Sex", "Distribution of Sex")
+    plot_feature(df, "Year Level", "Year Level", "Distribution of Year Level")
+    plot_feature(df, "Course", "Course", "Distribution of Course")
+    plot_feature(df, "Income", "Income", "Distribution of Family Income")
 
     # encode the data to numeric
     le = LabelEncoder()

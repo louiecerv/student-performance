@@ -27,7 +27,8 @@ def app():
     if "user_inputs" not in st.session_state:
         st.session_state.user_inputs = ''
 
-    st.write("""The trained model will predict the E-Banking Usage Level from the information provided.""")
+    st.write("""The trained classification model will predict the E-Banking Usage Level 
+    from the information provided.""")
     
     st.subheader('User Information')
     update_selections()
@@ -62,6 +63,34 @@ def app():
 
         result = 'The predicted Usage Level: ' + level
         st.subheader(result)
+
+        text = """The potential uses of E-Banking Usage prediction:
+        \n1. Targeted Marketing and Promotions:
+        \nBanks can leverage the model to identify customer segments 
+        with high e-banking usage propensity. Based on these segments, 
+        banks can design targeted marketing campaigns promoting 
+        features and benefits of their e-banking platforms.
+        This can lead to increased adoption and usage of e-banking services.
+        \n2. Fraud Detection and Risk Management:
+        The model can be used to identify patterns in e-banking behavior 
+        that deviate from a user's usual activity. This can be helpful in 
+        flagging potentially fraudulent transactions and mitigating financial risks.
+        \n3. Personalized User Experience:
+        By understanding a user's e-banking habits, the model can help 
+        personalize their online banking experience. For instance, 
+        the platform can prioritize features most relevant to the user's 
+        needs and suggest functionalities they might find helpful based 
+        on their predicted usage patterns.
+        \n4. Customer Segmentation and Retention:
+        The model can be used to segment customers based on their 
+        e-banking usage levels. Banks can then tailor their communication and service
+        offerings to cater to the specific needs of each segment.
+        This can improve customer satisfaction and retention.
+        \n5. Product Development and Innovation: Insights from the model 
+        can inform the development of new e-banking features and functionalities. 
+        Banks can prioritize features that cater to the needs of high 
+        e-banking usage segments, potentially leading to a more user-friendly 
+        and adopted platform."""
     
 def update_selections():
     gender = st.selectbox('Gender:', ['Male', 'Female'])

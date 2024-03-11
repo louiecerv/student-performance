@@ -91,6 +91,7 @@ def app():
         Banks can prioritize features that cater to the needs of high 
         e-banking usage segments, potentially leading to a more user-friendly 
         and adopted platform."""
+        st.write(text)
     
 def update_selections():
     gender = st.selectbox('Gender:', ['Male', 'Female'])

@@ -47,6 +47,16 @@ def app():
     st.write('Confusion Matrix')
     cm = confusion_matrix(y_test, y_test_pred)
     st.text(cm)
+    text = """Key elements in a Confusion Matrix
+    \nDiagonal elements: Ideally, these elements (very low predicted as very low, low 
+    predicted as low, and so on) will have the highest values. This indicates a high 
+    number of correct classifications for each class.
+    \nOff-diagonal elements: These elements represent misclassifications. High values in
+    these cells indicate the model frequently confuses between those specific classes.
+    \nBy analyzing the confusion matrix, we can assess the performance of the 
+    model for each class and identify areas for improvement, such as if the 
+    model is consistently misclassifying "very low" data points as "low"."""
+    st.write(text)
 
     st.subheader('Performance Metrics')
     st.text(classification_report(y_test, y_test_pred))
@@ -86,14 +96,16 @@ def app():
         trained relatively quickly."""
 
     else:   #Gradient Boosting
-        report = """Gradient boosting classifiers perform well on the MNIST 
-        handwritten digit dataset, typically achieving accuracy in the high 90s 
-        (often exceeding 98%). Gradient boosting excels at handling complex, 
-        non-linear relationships within the data, which is helpful for
-        recognizing the varied shapes of handwritten digits. It can achieve 
-        accuracy comparable to other popular methods for MNIST like 
-        Support Vector Machines (SVMs) and Random Forests."""
         classifier = "Gradient Boosting"
+        report = """Gradient boosting classifier is a machine learning technique that 
+        combines multiple weak models, like decision trees, into a single strong 
+        learner. Here's the gist of how it works:
+        \nTrain a weak learner on the data. Analyze the errors from that model's 
+        predictions. Train a second weak learner to specifically address those errors. 
+        Combine the predictions from both weak learners. By combining these weak 
+        learners, the gradient boosting classifier becomes much better at predicting 
+        the target variable than any of the individual weak models could be on their own."""
+
 
     st.subheader('Performance of the ' + classifier)
 

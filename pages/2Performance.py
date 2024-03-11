@@ -52,31 +52,39 @@ def app():
     st.text(classification_report(y_test, y_test_pred))
 
     classifier = ''
-    if st.session_state['selected_model'] == 0:     # Logistic Regression
-        report = """Achieves good accuracy, but can be prone to 
-        overfitting, leading to lower performance on unseen data.
-        Simple and interpretable, allowing visualization of decision rules.
-        Susceptible to changes in the training data, potentially 
-        leading to high variance in predictions."""
-        classifier = 'Logistic Regression'
-    elif st.session_state['selected_model'] == 1:   # SVR
-        report = """Performance: Can achieve similar or slightly better 
-        accuracy compared to a random forest, but results can vary 
-        depending on hyperparameter tuning. Introduces additional randomness 
-        during tree building by randomly selecting features at each split.  Aims to 
-        further improve generalization and reduce overfitting by increasing 
-        the diversity of trees in the ensemble. Requires careful 
-        hyperparameter tuning to achieve optimal performance."""
-        classifier = "SVR Regressor"
-    elif st.session_state['selected_model'] == 2:   # Decision Tree
-        report = """Performance: Can achieve similar or slightly better 
-        accuracy compared to a random forest, but results can vary 
-        depending on hyperparameter tuning. Introduces additional randomness 
-        during tree building by randomly selecting features at each split.  Aims to 
-        further improve generalization and reduce overfitting by increasing 
-        the diversity of trees in the ensemble. Requires careful 
-        hyperparameter tuning to achieve optimal performance."""
+    if st.session_state['selected_model'] == 0:     
+        classifier = 'Extra Trees Classifier'
+        report = """Extra Trees Classifier is a machine learning method for classification tasks. 
+        It belongs to a family of algorithms called ensemble methods, which combine multiple
+         models (in this case, decision trees) to get a better prediction than any single model.
+         It builds multiple decision trees, but with randomness injected at two key points: 
+         selecting features and choosing split points within those features. This randomness 
+         helps reduce overfitting by making the trees more independent."""
+        
+    elif st.session_state['selected_model'] == 1:   
+        classifier = "Support Vector Machine"
+        report = """A support vector machine (SVM) is a machine learning algorithm that excels at 
+        classifying data points.  SVMs find te line (or hyperplane in higher dimensions) 
+        that maximizes the margin between the two classes. A wider margin translates to a 
+        better separation and potentially better classification on unseen data. SVMs are 
+        particularly useful for: High dimensional data: They can handle complex data 
+        with many features. Smaller datasets: They can perform well even with limited 
+        training data. Non-linear classification: By using kernel functions, 
+        SVMs can handle data that isn't easily separable with a straight line."""
+        
+    elif st.session_state['selected_model'] == 2:  
         classifier = "Decision Tree"
+        report = """A decision tree classifier is a machine learning algorithm that works 
+        by building a tree-like model to classify data. It asks a series of questions 
+        about the data's features at each branch of the tree, and based on the answers, 
+        it directs the data down a specific path until it reaches a leaf node that 
+        contains the predicted classification. 
+        Easy to understand and interpret: The decision-making process is clear and 
+        transparent, unlike some other machine learning models. Good for handling 
+        high-dimensional data: They can work well with data that has many features. 
+        Fast training time: Compared to some other algorithms, decision trees can be 
+        trained relatively quickly."""
+
     else:   #Gradient Boosting
         report = """Gradient boosting classifiers perform well on the MNIST 
         handwritten digit dataset, typically achieving accuracy in the high 90s 

@@ -27,40 +27,41 @@ def app():
     if "user_inputs" not in st.session_state:
         st.session_state.user_inputs = ''
 
-    st.write("""The trained model will predict the Usage Level from the information provided.""")
+    st.write("""The trained model will predict the E-Banking Usage Level from the information provided.""")
     
     st.subheader('User Information')
     update_selections()
 
-    st.write('Unencoded user inputs:')
-    user_inputs = np.array(st.session_state['user_inputs'])
-    st.write(user_inputs)
+    if button("Start")
+        st.write('Unencoded user inputs:')
+        user_inputs = np.array(st.session_state['user_inputs'])
+        st.write(user_inputs)
 
-    st.write('Encoded user inputs:')
-    le_list = st.session_state["le_list"]
-    encoded = []
-    i = 0
-    for value in user_inputs[0]:
-        result = le_list[i].transform([value])
-        encoded.append(result)
-        i = i + 1
-    encoded = pd.DataFrame(encoded)
-    st.write(encoded.transpose())
-    predicted =  st.session_state["clf"].predict(encoded.transpose())
-    level = ''
-    if predicted==0:
-        level = 'Very Low'
-    elif predicted==1:
-        level = 'Low'
-    elif predicted==2:
-        level = 'Moderate'
-    elif predicted==3:
-        level = 'High'
-    else:        
-        level = 'Very High'
+        st.write('Encoded user inputs:')
+        le_list = st.session_state["le_list"]
+        encoded = []
+        i = 0
+        for value in user_inputs[0]:
+            result = le_list[i].transform([value])
+            encoded.append(result)
+            i = i + 1
+        encoded = pd.DataFrame(encoded)
+        st.write(encoded.transpose())
+        predicted =  st.session_state["clf"].predict(encoded.transpose())
+        level = ''
+        if predicted==0:
+            level = 'Very Low'
+        elif predicted==1:
+            level = 'Low'
+        elif predicted==2:
+            level = 'Moderate'
+        elif predicted==3:
+            level = 'High'
+        else:        
+            level = 'Very High'
 
-    result = 'The predicted Usage Level: ' + level
-    st.subheader(result)
+        result = 'The predicted Usage Level: ' + level
+        st.subheader(result)
     
 def update_selections():
     gender = st.selectbox('Gender:', ['Male', 'Female'])

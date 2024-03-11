@@ -19,7 +19,20 @@ def app():
         st.session_state.le_list = []
 
     st.subheader('The task: Classify E-banking usage as very low, low, moderate, high or very high.')
-    text = """Describe the dataset and the various algorithms here."""
+    text = """CBM Student E-Banking Usage Dataset
+    \nThis dataset investigates the factors that affect e-banking usage and spending habits 
+    among students at CBM.
+    \nFeatures:
+    \nsex (categorical): Student's gender (e.g., Male, Female)
+    \nyear_level (categorical): Student's year in the program
+    \ncourse (categorical): Student's course of study
+    \nfamily_income (numerical): Student's reported family income level
+    \nTarget Variable:
+    \nusagelevel (categorical): Level of e-banking usage by the student
+    \nSampling Method:
+    \nStratified random sampling: This ensures the sample population reflects the 
+    proportions of students based on year level and/or course within CBM."""
+    
     st.write(text)
 
     #replace with your dataset

@@ -33,21 +33,28 @@ def app():
 
     # Show the distribution of usagelevel
     fig, ax = plt.subplots(figsize=(5, 5))
-    # Create the countplot with clear title and legend
+
+    # Define the desired order
+    desired_order = ["very low", "low", "moderate", "high", "very high"]
+
+    # Ensure data categories match desired order (optional)
+    df["usagelevel"] = pd.Categorical(df["usagelevel"], categories=desired_order)
+
+    # Create the countplot
     p = sns.barplot(
-    y="usagelevel",  
-    x="count",  
-    order=df["usagelevel"].value_counts().index,  # Order bars based on counts
-    data=df.value_counts("usagelevel").reset_index(name="count"),  # Reshape data for counting
-    palette="bright"  # Set color palette
+        y="usagelevel",
+        x="count",
+        order=desired_order,  # Order bars based on the specified list
+        data=df.value_counts("usagelevel").reset_index(name="count"),
+        palette="bright"
     )
+
     ax.set_title("Distribution of E-banking Usage Level", fontsize=14)
     ax.bar_label(ax.containers[0])  # Add frequency counts to the bars
 
     # Display the plot
-    plt.tight_layout()  # Prevent overlapping elements
+    plt.tight_layout()
     st.pyplot(fig)
-
     # encode the data to numeric
     le = LabelEncoder()
     #Get the list of column names

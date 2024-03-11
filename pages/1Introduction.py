@@ -22,15 +22,15 @@ def app():
     text = """CBM Student E-Banking Usage Dataset
     \nThis dataset investigates the factors that affect e-banking usage and spending habits 
     among students at CBM.
-    \nFeatures:
-    \nsex (categorical): Student's gender (e.g., Male, Female)
-    \nyear_level (categorical): Student's year in the program
-    \ncourse (categorical): Student's course of study
-    \nfamily_income (numerical): Student's reported family income level
-    \nTarget Variable:
-    \nusagelevel (categorical): Level of e-banking usage by the student
-    \nSampling Method:
-    \nStratified random sampling: This ensures the sample population reflects the 
+    Features:
+    sex (categorical): Student's gender (e.g., Male, Female)
+    year_level (categorical): Student's year in the program
+    course (categorical): Student's course of study
+    family_income (numerical): Student's reported family income level
+    Target Variable:
+    usagelevel (categorical): Level of e-banking usage by the student
+    Sampling Method:
+    Stratified random sampling: This ensures the sample population reflects the 
     proportions of students based on year level and/or course within CBM."""
     
     st.write(text)

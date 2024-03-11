@@ -59,8 +59,11 @@ def app():
     st.session_state["le"] = le_list
     st.session_state['df'] = df    
 
-    st.write('After encoding to numbers')
+    st.write('The Dataset after encoding features to numbers')
     st.write(df)
+
+    st.write('Descriptive Statistics')
+    st.write(df.describe().T)
     
     X = df.drop('usagelevel', axis=1)
     y = df['usagelevel']

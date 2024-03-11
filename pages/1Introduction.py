@@ -64,11 +64,11 @@ def app():
     st.session_state['y_test'] = y_test    
 
     # Show the distribution of usagelevel
-    fig, ax = plt.subplots(figsize=(5, 2))
+    fig, ax = plt.subplots(figsize=(5, 5))
     # Create the countplot with clear title and legend
     p = sns.barplot(
-    y="usagelevel",  # Specify "Sex" as the y-axis for horizontal orientation
-    x="count",  # Count occurrences for each "Sex" value in df
+    y="usagelevel",  
+    x="count",  
     order=df["usagelevel"].value_counts().index,  # Order bars based on counts
     data=df.value_counts("usagelevel").reset_index(name="count"),  # Reshape data for counting
     palette="bright"  # Set color palette

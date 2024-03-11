@@ -16,15 +16,15 @@ from sklearn.svm import SVC
 # Define the Streamlit app
 def app():
 
-    if gender not in st.session_state:
+    if "gender" not in st.session_state:
         st.session_state.gender = ''
-    if yearlevel not in st.session_state:
+    if "yearlevel" not in st.session_state:
         st.session_state.yearlevel = ''
-    if course not in st.session_state:
+    if "course" not in st.session_state:
         st.session_state.course = ''
-    if income not in st.session_state:
+    if "income" not in st.session_state:
         st.session_state.income = ''
-    if user_inputs not in st.session_state:
+    if "user_inputs" not in st.session_state:
         st.session_state.user_inputs = ''
 
     st.write("""The trained model will predict the Usage Level from the information provided.""")

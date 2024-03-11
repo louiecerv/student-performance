@@ -64,7 +64,7 @@ def app():
         result = 'The predicted Usage Level: ' + level
         st.subheader(result)
 
-        text = """The potential uses of E-Banking Usage prediction:
+        text = """The potential uses of E-Banking Usage level prediction:
         \n1. Targeted Marketing and Promotions:
         Banks can leverage the 
         model to identify customer segments with high e-banking usage 

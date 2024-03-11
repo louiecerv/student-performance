@@ -31,7 +31,7 @@ def app():
     st.write('Browse the dataset')
     st.write(df)
 
-    plotfeature(df, "usagelevel", "Usage Level", "Distribution of E-banking Usage Level")
+    plot_feature(df, "usagelevel", "Usage Level", "Distribution of E-banking Usage Level")
 
     # encode the data to numeric
     le = LabelEncoder()

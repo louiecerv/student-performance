@@ -32,20 +32,27 @@ def app():
     st.write(df)
 
     desired_order = ["very low", "low", "moderate", "high", "very high"]
-    # Show the distribution of usagelevel
+    # Reshape data and set the categorical order explicitly
+    df_counts = (
+        df.value_counts("usagelevel")
+        .reset_index(name="count")
+        .astype({"usagelevel": "category"})  # Set as categorical
+        .cat.reorder_categories(desired_order, inplace=True)  # Reorder
+    )
+    # Create the bar plot with the correct order
     fig, ax = plt.subplots(figsize=(5, 5))
     p = sns.barplot(
-    y="usagelevel",  
-    x="count",  
-    order=desired_order,    
-    data=df.value_counts("usagelevel").reset_index(name="count"),  # Reshape data for counting
-    palette="bright"  # Set color palette
+        y="usagelevel",
+        x="count",
+        data=df_counts,
+        palette="bright",
     )
+    # Customize plot elements
     ax.set_title("Distribution of E-banking Usage Level", fontsize=14)
     ax.bar_label(ax.containers[0])  # Add frequency counts to the bars
+    plt.tight_layout()
 
     # Display the plot
-    plt.tight_layout()  # Prevent overlapping elements
     st.pyplot(fig)
 
 

@@ -61,6 +61,27 @@ def app():
     st.subheader('Performance Metrics')
     st.text(classification_report(y_test, y_test_pred))
 
+    text = """The classification_report function in scikit-learn provides a detailed breakdown
+    of the performance of your classification model for a multi-class problem, 
+    in this case, with five classes: "very low", "low", "moderate", "high", and "very high". 
+    \nClass labels:  This section lists all the five classes present in your data 
+    ("very low", "low", "moderate", "high", "very high").
+    \nPrecision: This metric shows, for each class, the ratio of correctly predicted 
+    positive cases (belonging to that class) to the total number of cases predicted 
+    as positive by the model. In simpler terms, it tells you how often the model was 
+    actually correct when it predicted a specific class (e.g., "very low").
+    \nRecall: This metric, also known as True Positive Rate (TPR), shows, for each 
+    class, the ratio of correctly predicted positive cases (belonging to that 
+    class) to all actual positive cases in the data for that class. In simpler terms, 
+    it tells how good the model was at identifying all the actual cases belonging 
+    to a specific class (e.g., how many truly "very low" data points were correctly 
+    classified).
+    \nF1-score: This is a harmonic mean of precision and recall, combining both 
+    metrics into a single score. A high F1-score indicates a good balance between 
+    precision and recall.
+    \nSupport: This column shows the total number of true instances for each class in 
+    the test data. It shows the class distribution and identify potential
+    issues due to class imbalance."""
     classifier = ''
     if st.session_state['selected_model'] == 0:     
         classifier = 'Extra Trees Classifier'

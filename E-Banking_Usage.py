@@ -52,7 +52,7 @@ def app():
 
     st.image('e-banking.jpg', caption="The E-banking Usage")
     text = """Dataset for E-Banking Usage and Spending Habits of CBM Students at WVSU
-    \nThis dataset investigates the factors that affec the e-banking usage and 
+    \nThis dataset investigates the factors that affect the e-banking usage and 
     spending habits among College of Business Management (CBM) students at 
     West Visayas State University (WVSU).
     \nFeatures:

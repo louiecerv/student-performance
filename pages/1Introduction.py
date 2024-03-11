@@ -72,7 +72,7 @@ def app():
         time.sleep(0.01)
     st.success("Data visualization completed!")
 
-def plot_feature(df, feature, title):
+def plot_feature(df, feature, feature_label, title):
         # Show the distribution of usagelevel
         #df_counts = df["usagelevel"].value_counts().reset_index(name="count")
         df_counts = df[feature].value_counts().reset_index(name="count")

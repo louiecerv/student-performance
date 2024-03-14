@@ -18,7 +18,7 @@ import time
 def app():
 
 
-    text = """E-banking Usage level and Influence on Spending Habits Among College of Business and Management Students"""
+    text = """Student Performance Classification Using Artificial Intelligence Techniques"""
     st.subheader(text)
 
     # Use session state to track the current form

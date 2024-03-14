@@ -118,8 +118,8 @@ def app():
         st.write('Confusion Matrix:')
         cm = confusion_matrix(y_test, y_test_pred)
         st.text(cm)
-        text = """Key elements in a Confusion Matrix
-        \nDiagonal elements: Ideally, these elements (very low predicted as very low, low 
+        text = """
+        Diagonal elements: Ideally, these elements (very low predicted as very low, low 
         predicted as low, and so on) will have the highest values. This indicates a high 
         number of correct classifications for each class.
         \nOff-diagonal elements: These elements represent misclassifications. High values in
@@ -127,7 +127,8 @@ def app():
         \nBy analyzing the confusion matrix, we can assess the performance of the 
         model for each class and identify areas for improvement, such as if the 
         model is consistently misclassifying "very low" data points as "low"."""
-        st.write(text)
+        with st.expander("Key elements in a Confusion Matrix"):
+            st.write(text)
 
         st.subheader('Performance Metrics')
         st.text(classification_report(y_test, y_test_pred))
@@ -152,7 +153,9 @@ def app():
         \nSupport: This column shows the total number of true instances for each class in 
         the test data. It shows the class distribution and identify potential
         issues due to class imbalance."""
-        st.write(text)
+        with st.expander("About the Classification Report"):
+            st.write(text)
+
 
 #run the app
 if __name__ == "__main__":

@@ -37,7 +37,9 @@ def app():
 
     #replace with your dataset
     df = pd.read_csv('e-banking3.csv', header=0)
-
+    
+    # Shuffle the DataFrame (returns a copy)
+    df = df.sample(frac=1)
     st.write('Browse the dataset')
     st.write(df)
 

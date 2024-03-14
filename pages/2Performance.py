@@ -34,9 +34,6 @@ def app():
         clf = GradientBoostingClassifier(n_estimators=100, learning_rate=1.0, max_depth=3)
         st.session_state['selected_model'] = 3
 
-    st.subheader('Performance of the ' + classifier)
-    st.write("Click the button to start the test.")        
-
     classifier = ''
     if st.session_state['selected_model'] == 0:     
         classifier = 'Extra Trees Classifier'
@@ -82,8 +79,11 @@ def app():
         learners, the gradient boosting classifier becomes much better at predicting 
         the target variable than any of the individual weak models could be on their own."""
 
-        st.write(classifier)
-        st.write(report)
+    st.subheader('Performance of the ' + classifier)
+    st.write(classifier)
+    st.write(report)
+
+    st.write("Click the button to start the test.")    
 
     if st.button("Begin Test"):
         X_train = st.session_state['X_train']

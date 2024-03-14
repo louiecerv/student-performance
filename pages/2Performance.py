@@ -25,7 +25,7 @@ def app():
         st.session_state.clf = ExtraTreesClassifier(n_estimators=200)
         st.session_state['selected_model'] = 0
     elif selected_option=='SVM':        
-        st.session_state.clf = SVC()
+        st.session_state.clf = SVC(C=100.0)
         st.session_state['selected_model'] = 1
     elif selected_option == 'Decision Tree':
         st.session_state.clf = DecisionTreeClassifier()

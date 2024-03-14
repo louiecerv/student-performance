@@ -32,8 +32,8 @@ def app():
     Sampling Method:
     Stratified random sampling: This ensures the sample population reflects the 
     proportions of students based on year level and/or course within CBM."""
-    
-    st.write(text)
+    with st.expander("About the Classification Task. CLick to expand."):
+        st.write(text)
 
     #replace with your dataset
     df = pd.read_csv('e-banking3.csv', header=0)

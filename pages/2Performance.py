@@ -19,7 +19,7 @@ def app():
     st.sidebar.subheader('Select the classifier')
 
     # Create the selection of classifier
-    options = ['Extra Trees Classifier', 'SVM', 'Decision Tree', 'Gradient Boosting']
+    options = ['Extra Trees Classifier', 'SVM', 'Decision Tree', 'Gradient Boosting', 'MLP Classifier']
     selected_option = st.sidebar.selectbox('Select the classifier', options)
     if selected_option=='Extra Trees Classifier':        
         st.session_state.clf = ExtraTreesClassifier(n_estimators=200)

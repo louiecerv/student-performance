@@ -86,7 +86,7 @@ def app():
     st.write("Click the button to start the test.")    
 
     if st.button("Begin Test"):
-        X = train = st.session_state.X_train
+        X_train = st.session_state.X_train
         y_train = st.session_state.y_train
         X_test = st.session_state.X_test
         y_test = st.session_state.y_test

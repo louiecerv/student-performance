@@ -53,7 +53,7 @@ def app():
 
     st.write('Descriptive Statistics')
     st.write(df.describe().T)
-
+    df = df.drop('STUDENT ID', axis=1)
     X = df.drop('GRADE', axis=1)
     y = df['GRADE']
     

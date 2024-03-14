@@ -83,11 +83,22 @@ def app():
         the target variable than any of the individual weak models could be on their own."""
     else:
         classifier = "MLP Classifier"
-        report = """Replace with MLP Description"""
+        report = """The performance of an MLP classifier on a classification task for 
+        online banking usage can vary depending on several factors, including:
+        \nData characteristics: The quality and quantity of data used to train the model 
+        is crucial. Factors like the number of features, their relevance, and the balance 
+        between different classes all affect performance.
+        \nMLP architecture: The number of hidden layers, neurons per layer, and activation functions 
+        can significantly impact the model's ability to learn complex patterns in the data. 
+        Tuning these hyperparameters is essential for optimal performance.
+        \nTraining process: The chosen optimization algorithm, learning rate, and number of 
+        training epochs all influence how well the MLP generalizes to unseen data"""
                  
     st.subheader('Performance of the ' + classifier)
-    st.write(classifier)
-    st.write(report)
+    # Create the expander with a descriptive label
+    with st.expander("Click to unfold and view the classifier performance details."):
+        st.write(classifier)
+        st.write(report)
 
     st.write("Click the button to start the test.")    
 

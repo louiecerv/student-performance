@@ -2,7 +2,6 @@
 import numpy as np
 import pandas as pd
 import streamlit as st
-import altair as alt
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import confusion_matrix
@@ -12,6 +11,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.svm import SVC
+from sklearn.neural_network import MLPClassifier
 
 # Define the Streamlit app
 def app():
@@ -33,6 +33,11 @@ def app():
     elif selected_option == 'Gradient Boosting':
         st.session_state.clf = GradientBoostingClassifier(n_estimators=100, learning_rate=1.0, max_depth=3)
         st.session_state['selected_model'] = 3
+    elif selected_option = 'MLP Classifier':
+        st.session_state.clf = clf = MLPClassifier(hidden_layer_sizes=100,), 
+            solver='lbfgs', activation='relu', 
+            max_iter=300, random_state=42)
+        st.session_state['selected_model'] = 4
 
     classifier = ''
     if st.session_state['selected_model'] == 0:     
@@ -68,7 +73,7 @@ def app():
         Fast training time: Compared to some other algorithms, decision trees can be 
         trained relatively quickly."""
 
-    else:   #Gradient Boosting
+    elif st.session_state['selected_model'] == 3:   #Gradient Boosting
         classifier = "Gradient Boosting Classifier"
         report = """Gradient boosting classifier is a machine learning technique that 
         combines multiple weak models, like decision trees, into a single strong 
@@ -78,7 +83,10 @@ def app():
         Combine the predictions from both weak learners. By combining these weak 
         learners, the gradient boosting classifier becomes much better at predicting 
         the target variable than any of the individual weak models could be on their own."""
-
+    else:
+        classifier = "MLP Classifier"
+        report = """Replace with MLP Description"""
+                 
     st.subheader('Performance of the ' + classifier)
     st.write(classifier)
     st.write(report)

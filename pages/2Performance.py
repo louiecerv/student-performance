@@ -34,8 +34,7 @@ def app():
         st.session_state.clf = GradientBoostingClassifier(n_estimators=100, learning_rate=1.0, max_depth=3)
         st.session_state['selected_model'] = 3
     elif selected_option == 'MLP Classifier':
-        st.session_state.clf = MLPClassifier(hidden_layer_sizes=100,), solver='adam', activation='relu', max_iter=300, random_state=42)
-
+        st.session_state.clf = MLPClassifier(solver='adam', activation='relu', max_iter=300, random_state=42)
         st.session_state['selected_model'] = 4
 
     classifier = ''

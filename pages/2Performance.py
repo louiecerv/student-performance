@@ -88,9 +88,9 @@ def app():
         learners, the gradient boosting classifier becomes much better at predicting 
         the target variable than any of the individual weak models could be on their own."""
 
-    if st.button("Begin Test"):
         st.subheader('Performance of the ' + classifier)
-
+        st.write("Click the button to start the test.")
+    if st.button("Begin Test"):
         st.write(classifier)
         st.write(report)
 

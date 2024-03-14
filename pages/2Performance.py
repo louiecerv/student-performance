@@ -91,7 +91,7 @@ def app():
         X_test = st.session_state.X_test
         y_test = st.session_state.y_test
 
-        st.session_state.clf.fit(X = train, y_train)
+        st.session_state.clf.fit(X_train, y_train)
         y_test_pred = st.session_state.clf.predict(X_test)
 
         st.subheader('Confusion Matrix')

@@ -90,6 +90,7 @@ def app():
 
         st.subheader('Performance of the ' + classifier)
         st.write("Click the button to start the test.")
+        
     if st.button("Begin Test"):
         st.write(classifier)
         st.write(report)

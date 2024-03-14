@@ -32,7 +32,7 @@ def app():
     Sampling Method:
     Stratified random sampling: This ensures the sample population reflects the 
     proportions of students based on year level and/or course within CBM."""
-    with st.expander("About the Classification Task. CLick to expand."):
+    with st.expander("About the Dataset. CLick to expand."):
         st.write(text)
 
     #replace with your dataset

@@ -59,15 +59,16 @@ def app():
     text = """\nThis dataset investigates the factors that affect the e-banking usage and 
     spending habits among College of Business Management (CBM) students at 
     West Visayas State University (WVSU).
-    \nFeatures:
-    \nfamily_income (categorical): This feature represents the student's family 
+    Features:
+    family_income (categorical): This feature represents the student's family 
     income level. It is divided into categories based on a pre-defined income range.
-    \nSex (binary): This feature indicates the student's sex, coded as "male" or "female."
-    \ncourse (categorical): This feature specifies the student's academic program within CBM. 
-    \nLabel: e_banking_usage (binary): This variable indicates the student's level of 
+    Sex (binary): This feature indicates the student's sex, coded as "male" or "female."
+    course (categorical): This feature specifies the student's academic program within CBM. 
+    Label: e_banking_usage (binary): This variable indicates the student's level of 
     e-banking usage. It is coded as categories of 'very high', 'high', 'moderate', 'low' and 'very low'."""
+    with st.expander("Click to view Data App Description"):
+        st.write(text)
 
-    st.write(text)
 
 #run the app
 if __name__ == "__main__":

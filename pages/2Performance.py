@@ -90,9 +90,12 @@ def app():
         y_train = st.session_state.y_train
         X_test = st.session_state.X_test
         y_test = st.session_state.y_test
+        clf = st.session_state.clf
 
-        st.session_state.clf.fit(X_train, y_train)
-        y_test_pred = st.session_state.clf.predict(X_test)
+        clf.fit(X_train, y_train)
+        y_test_pred = clf.predict(X_test)
+        # save the clf to the session state
+        st.session_state['clf'] = clf
 
         st.subheader('Confusion Matrix')
         st.write('Confusion Matrix:')
@@ -133,10 +136,6 @@ def app():
         the test data. It shows the class distribution and identify potential
         issues due to class imbalance."""
         st.write(text)
-
-
-        # save the clf to the session state
-        st.session_state['clf'] = clf
 
 #run the app
 if __name__ == "__main__":

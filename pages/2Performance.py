@@ -16,12 +16,6 @@ from sklearn.svm import SVC
 # Define the Streamlit app
 def app():
 
-    X_train = st.session_state['X_train']
-    X_test = st.session_state['X_test']
-    y_train= st.session_state['y_train']
-    y_test = st.session_state['y_test']
-    clf = st.session_state['clf']
-
     st.sidebar.subheader('Select the classifier')
 
     # Create the selection of classifier
@@ -40,13 +34,18 @@ def app():
         clf = GradientBoostingClassifier(n_estimators=100, learning_rate=1.0, max_depth=3)
         st.session_state['selected_model'] = 3
 
-
-
     if st.button("Begin Test"):
+        X_train = st.session_state['X_train']
+        X_test = st.session_state['X_test']
+        y_train= st.session_state['y_train']
+        y_test = st.session_state['y_test']
+        clf = st.session_state['clf']
+
         clf.fit(X_train, y_train)
         y_test_pred = clf.predict(X_test)
 
         classifier = ''
+        
         if st.session_state['selected_model'] == 0:     
             classifier = 'Extra Trees Classifier'
             report = """Extra Trees Classifier is a machine learning method for classification tasks. 
@@ -79,7 +78,7 @@ def app():
             high-dimensional data: They can work well with data that has many features. 
             Fast training time: Compared to some other algorithms, decision trees can be 
             trained relatively quickly."""
-            
+
         else:   #Gradient Boosting
             classifier = "Gradient Boosting Classifier"
             report = """Gradient boosting classifier is a machine learning technique that 

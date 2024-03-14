@@ -50,22 +50,14 @@ def app():
     West Visayas State University"""
     st.text(text)
 
-    st.image('e-banking.jpg', caption="The E-banking Usage")
-    text = """Dataset for E-Banking Usage and Spending Habits of CBM Students at WVSU is used 
-    with permission from an undergraduate thesis paper:"""
+    st.image('academic-perf.png', caption="Improving Student Performance Using AI")
+    text = """This Data App uses the publicly available dataset found at https://archive.ics.uci.edu/dataset/856/higher+education+students+performance+evaluation"""
     st.write(text)  
-    st.markdown("Baldevarona, A. M. G., Banggud, R. B., Gronifillo, G. C., Honrado, S. R. B., & Jamelarin,  R. J. E. L. *E-banking Usage Level and Influences on Spending Habits Among College of Business and Management students.* Unpublished undergraduate thesis. (2024)")
-
-    text = """\nThis dataset investigates the factors that affect the e-banking usage and 
-    spending habits among College of Business Management (CBM) students at 
-    West Visayas State University (WVSU).
-    Features:
-    family_income (categorical): This feature represents the student's family 
-    income level. It is divided into categories based on a pre-defined income range.
-    Sex (binary): This feature indicates the student's sex, coded as "male" or "female."
-    course (categorical): This feature specifies the student's academic program within CBM. 
-    Label: e_banking_usage (binary): This variable indicates the student's level of 
-    e-banking usage. It is coded as categories of 'very high', 'high', 'moderate', 'low' and 'very low'."""
+   
+    text = """The original paper used artificial intelligence techniques are applied to the 
+    questionnaire results that consists the main indicators, of three different courses of 
+    two faculties in order to classify students’ final grade performances and to determine 
+    the most efficient machine learning algorithm for this task."""
     with st.expander("Click to view Data App Description"):
         st.write(text)
 

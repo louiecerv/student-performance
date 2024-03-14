@@ -22,7 +22,7 @@ def app():
     options = ['Extra Trees Classifier', 'SVM', 'Decision Tree', 'Gradient Boosting']
     selected_option = st.sidebar.selectbox('Select the classifier', options)
     if selected_option=='Extra Trees Classifier':        
-        st.session_state.clf = ExtraTreesClassifier()
+        st.session_state.clf = ExtraTreesClassifier(n_estimators=200)
         st.session_state['selected_model'] = 0
     elif selected_option=='SVM':        
         st.session_state.clf = SVC()

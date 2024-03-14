@@ -36,7 +36,7 @@ def app():
 
     #replace with your dataset
     df = pd.read_csv('hei-perf.csv', header=0)
-    
+    df = df.drop('STUDENT ID', axis=1)
     # Shuffle the DataFrame (returns a copy)
     df = df.sample(frac=1)
     st.write('Browse the dataset')
@@ -53,7 +53,7 @@ def app():
 
     st.write('Descriptive Statistics')
     st.write(df.describe().T)
-    df = df.drop('STUDENT ID', axis=1)
+
     X = df.drop('GRADE', axis=1)
     y = df['GRADE']
     

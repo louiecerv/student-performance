@@ -88,7 +88,6 @@ def app():
     st.write('Descriptive Statistics')
     st.write(df.describe().T)
 
-            
     X = df.drop('usagelevel', axis=1)
     y = df['usagelevel']
     

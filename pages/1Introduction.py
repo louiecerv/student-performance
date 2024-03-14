@@ -100,7 +100,7 @@ def app():
     st.session_state['X_test'] = X_test
     st.session_state['y_train'] = y_train
     st.session_state['y_test'] = y_test    
-
+    
     for i in range(100):
         # Update progress bar value
         st.progress_bar.progress(i + 1)

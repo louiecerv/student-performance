@@ -22,16 +22,16 @@ def app():
     options = ['Extra Trees Classifier', 'SVM', 'Decision Tree', 'Gradient Boosting']
     selected_option = st.sidebar.selectbox('Select the classifier', options)
     if selected_option=='Extra Trees Classifier':        
-        clf = ExtraTreesClassifier()
+        st.session_state.clf = ExtraTreesClassifier()
         st.session_state['selected_model'] = 0
     elif selected_option=='SVM':        
-        clf = SVC()
+        st.session_state.clf = SVC()
         st.session_state['selected_model'] = 1
     elif selected_option == 'Decision Tree':
-        clf = DecisionTreeClassifier()
+        st.session_state.clf = DecisionTreeClassifier()
         st.session_state['selected_model'] = 2
     elif selected_option == 'Gradient Boosting':
-        clf = GradientBoostingClassifier(n_estimators=100, learning_rate=1.0, max_depth=3)
+        st.session_state.clf = GradientBoostingClassifier(n_estimators=100, learning_rate=1.0, max_depth=3)
         st.session_state['selected_model'] = 3
 
     classifier = ''
@@ -86,14 +86,8 @@ def app():
     st.write("Click the button to start the test.")    
 
     if st.button("Begin Test"):
-        X_train = st.session_state['X_train']
-        X_test = st.session_state['X_test']
-        y_train= st.session_state['y_train']
-        y_test = st.session_state['y_test']
-        clf = st.session_state['clf']
-        clf.fit(X_train, y_train)
-
-        y_test_pred = clf.predict(X_test)
+        st.session_state.clf.fit(X_train, y_train)
+        y_test_pred = st.session_state.clf.predict(X_test)
 
         st.subheader('Confusion Matrix')
         st.write('Confusion Matrix:')

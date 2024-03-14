@@ -87,56 +87,56 @@ def app():
         Combine the predictions from both weak learners. By combining these weak 
         learners, the gradient boosting classifier becomes much better at predicting 
         the target variable than any of the individual weak models could be on their own."""
+        
+    if st.button("Begin Test")
+        st.subheader('Performance of the ' + classifier)
 
-    st.subheader('Performance of the ' + classifier)
+        st.write(classifier)
+        st.write(report)
 
-    st.write(classifier)
-    st.write(report)
+        st.subheader('Confusion Matrix')
+        st.write('Confusion Matrix:')
+        cm = confusion_matrix(y_test, y_test_pred)
+        st.text(cm)
+        text = """Key elements in a Confusion Matrix
+        \nDiagonal elements: Ideally, these elements (very low predicted as very low, low 
+        predicted as low, and so on) will have the highest values. This indicates a high 
+        number of correct classifications for each class.
+        \nOff-diagonal elements: These elements represent misclassifications. High values in
+        these cells indicate the model frequently confuses between those specific classes.
+        \nBy analyzing the confusion matrix, we can assess the performance of the 
+        model for each class and identify areas for improvement, such as if the 
+        model is consistently misclassifying "very low" data points as "low"."""
+        st.write(text)
 
+        st.subheader('Performance Metrics')
+        st.text(classification_report(y_test, y_test_pred))
 
-    st.subheader('Confusion Matrix')
-    st.write('Confusion Matrix:')
-    cm = confusion_matrix(y_test, y_test_pred)
-    st.text(cm)
-    text = """Key elements in a Confusion Matrix
-    \nDiagonal elements: Ideally, these elements (very low predicted as very low, low 
-    predicted as low, and so on) will have the highest values. This indicates a high 
-    number of correct classifications for each class.
-    \nOff-diagonal elements: These elements represent misclassifications. High values in
-    these cells indicate the model frequently confuses between those specific classes.
-    \nBy analyzing the confusion matrix, we can assess the performance of the 
-    model for each class and identify areas for improvement, such as if the 
-    model is consistently misclassifying "very low" data points as "low"."""
-    st.write(text)
-
-    st.subheader('Performance Metrics')
-    st.text(classification_report(y_test, y_test_pred))
-
-    text = """The classification_report function in scikit-learn provides a detailed breakdown
-    of the performance of the classification model for a multi-class problem, 
-    in this case, with five classes: "very low", "low", "moderate", "high", and "very high". 
-    \nClass labels:  This section lists all the five classes present in the data.
-    \nPrecision: This metric shows, for each class, the ratio of correctly predicted 
-    positive cases (belonging to that class) to the total number of cases predicted 
-    as positive by the model. In simpler terms, it tells you how often the model was 
-    actually correct when it predicted a specific class (e.g., "very low").
-    \nRecall: This metric, also known as True Positive Rate (TPR), shows, for each 
-    class, the ratio of correctly predicted positive cases (belonging to that 
-    class) to all actual positive cases in the data for that class. In simpler terms, 
-    it tells how good the model was at identifying all the actual cases belonging 
-    to a specific class (e.g., how many truly "very low" data points were correctly 
-    classified).
-    \nF1-score: This is a harmonic mean of precision and recall, combining both 
-    metrics into a single score. A high F1-score indicates a good balance between 
-    precision and recall.
-    \nSupport: This column shows the total number of true instances for each class in 
-    the test data. It shows the class distribution and identify potential
-    issues due to class imbalance."""
-    st.write(text)
+        text = """The classification_report function in scikit-learn provides a detailed breakdown
+        of the performance of the classification model for a multi-class problem, 
+        in this case, with five classes: "very low", "low", "moderate", "high", and "very high". 
+        \nClass labels:  This section lists all the five classes present in the data.
+        \nPrecision: This metric shows, for each class, the ratio of correctly predicted 
+        positive cases (belonging to that class) to the total number of cases predicted 
+        as positive by the model. In simpler terms, it tells you how often the model was 
+        actually correct when it predicted a specific class (e.g., "very low").
+        \nRecall: This metric, also known as True Positive Rate (TPR), shows, for each 
+        class, the ratio of correctly predicted positive cases (belonging to that 
+        class) to all actual positive cases in the data for that class. In simpler terms, 
+        it tells how good the model was at identifying all the actual cases belonging 
+        to a specific class (e.g., how many truly "very low" data points were correctly 
+        classified).
+        \nF1-score: This is a harmonic mean of precision and recall, combining both 
+        metrics into a single score. A high F1-score indicates a good balance between 
+        precision and recall.
+        \nSupport: This column shows the total number of true instances for each class in 
+        the test data. It shows the class distribution and identify potential
+        issues due to class imbalance."""
+        st.write(text)
 
 
-    # save the clf to the session state
-    st.session_state['clf'] = clf
+        # save the clf to the session state
+        st.session_state['clf'] = clf
 
 #run the app
 if __name__ == "__main__":

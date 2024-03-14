@@ -87,8 +87,8 @@ def app():
         Combine the predictions from both weak learners. By combining these weak 
         learners, the gradient boosting classifier becomes much better at predicting 
         the target variable than any of the individual weak models could be on their own."""
-        
-    if st.button("Begin Test")
+
+    if st.button("Begin Test"):
         st.subheader('Performance of the ' + classifier)
 
         st.write(classifier)
